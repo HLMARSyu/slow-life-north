@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>慢享北里·文化生活枢纽</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8B4513',
+                        secondary: '#D2B48C',
+                        accent: '#A0522D',
+                        light: '#F5F5DC',
+                        dark: '#3E2723',
+                        success: '#4CAF50',
+                        info: '#2196F3',
+                        warning: '#FFC107',
+                        danger: '#F44336'
+                    },
+                    fontFamily: {
+                        serif: ['Noto Serif SC', 'serif'],
+                        sans: ['Noto Sans SC', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'custom': '0 4px 20px rgba(0, 0, 0, 0.1)',
+                        'custom-hover': '0 10px 30px rgba(0, 0, 0, 0.15)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+            .text-shadow-lg {
+                text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+            }
+            .bg-opacity-80 {
+                background-opacity: 0.8;
+            }
+            .transition-all-300 {
+                transition: all 0.3s ease;
+            }
+            .transition-all-500 {
+                transition: all 0.5s ease;
+            }
+            .font-display {
+                font-weight: 700;
+                letter-spacing: -0.02em;
+            }
+            .font-body {
+                font-weight: 400;
+                line-height: 1.7;
+            }
+            .font-caption {
+                font-weight: 400;
+                font-size: 0.875rem;
+                line-height: 1.5;
+            }
+            .tracking-wide {
+                letter-spacing: 0.05em;
+            }
+            .tracking-wider {
+                letter-spacing: 0.1em;
+            }
+            .leading-tight {
+                line-height: 1.25;
+            }
+            .leading-relaxed {
+                line-height: 1.75;
+            }
+            .leading-loose {
+                line-height: 2;
+            }
+            .animate-fade-in {
+                animation: fadeIn 1s ease forwards;
+            }
+            .animate-slide-up {
+                animation: slideUp 1s ease forwards;
+            }
+            .animate-scale-in {
+                animation: scaleIn 0.8s ease forwards;
+            }
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+            @keyframes slideUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            @keyframes scaleIn {
+                from {
+                    opacity: 0;
+                    transform: scale(0.95);
+                }
+                to {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
+        }
+    </style>
+</head>
+<body class="font-sans bg-light text-dark">
+    <!-- 导航栏 -->
+    <nav class="bg-primary text-white fixed w-full z-50 shadow-lg transition-all duration-300">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa fa-map-marker text-2xl"></i>
+                <span class="text-xl font-bold">慢享北里</span>
+                <span class="text-sm opacity-80 hidden sm:inline-block">文化生活枢纽</span>
+            </div>
+            <div class="hidden md:flex space-x-6 lg:space-x-8">
+                <a href="#" class="hover:text-secondary transition-all-300 px-2 py-1 rounded">首页</a>
+                <a href="#about" class="hover:text-secondary transition-all-300 px-2 py-1 rounded">关于北里</a>
+                <a href="#theory" class="hover:text-secondary transition-all-300 px-2 py-1 rounded">理论支撑</a>
+                <a href="#districts" class="hover:text-secondary transition-all-300 px-2 py-1 rounded">六境分区</a>
+                <a href="#route" class="hover:text-secondary transition-all-300 px-2 py-1 rounded">慢行动线</a>
+                <a href="#value" class="hover:text-secondary transition-all-300 px-2 py-1 rounded">核心价值</a>
+                <a href="#comparison" class="hover:text-secondary transition-all-300 px-2 py-1 rounded">南北区对比</a>
+                <a href="#contact" class="hover:text-secondary transition-all-300 px-2 py-1 rounded">联系我们</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none p-2 rounded-full hover:bg-secondary hover:bg-opacity-30 transition-all-300">
+                    <i class="fa fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- 移动端菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-primary py-2 px-4 shadow-lg">
+            <a href="#" class="block py-3 px-4 hover:bg-secondary hover:bg-opacity-30 transition-all-300 rounded">首页</a>
+            <a href="#about" class="block py-3 px-4 hover:bg-secondary hover:bg-opacity-30 transition-all-300 rounded">关于北里</a>
+            <a href="#theory" class="block py-3 px-4 hover:bg-secondary hover:bg-opacity-30 transition-all-300 rounded">理论支撑</a>
+            <a href="#districts" class="block py-3 px-4 hover:bg-secondary hover:bg-opacity-30 transition-all-300 rounded">六境分区</a>
+            <a href="#route" class="block py-3 px-4 hover:bg-secondary hover:bg-opacity-30 transition-all-300 rounded">慢行动线</a>
+            <a href="#value" class="block py-3 px-4 hover:bg-secondary hover:bg-opacity-30 transition-all-300 rounded">核心价值</a>
+            <a href="#comparison" class="block py-3 px-4 hover:bg-secondary hover:bg-opacity-30 transition-all-300 rounded">南北区对比</a>
+            <a href="#contact" class="block py-3 px-4 hover:bg-secondary hover:bg-opacity-30 transition-all-300 rounded">联系我们</a>
+        </div>
+    </nav>
+
+    <!-- 英雄区 -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden bg-primary">
+        <!-- 背景图片 -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Italian%20style%20cultural%20district%2C%20historic%20buildings%2C%20pedestrian%20street%2C%20vibrant%20atmosphere%2C%20blurred%20background&image_size=landscape_16_9" alt="慢享北里" class="w-full h-full object-cover opacity-40 transition-transform duration-10000 hover:scale-105">
+        </div>
+        <!-- 渐变叠加 -->
+        <div class="absolute inset-0 bg-primary bg-opacity-70 z-10"></div>
+        <!-- 内容 -->
+        <div class="container mx-auto px-4 z-20 text-center">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 text-shadow leading-tight">
+                慢享北里·文化生活枢纽
+            </h1>
+            <p class="text-xl md:text-2xl text-white mb-10 text-shadow max-w-3xl mx-auto">
+                意风区北区「慢享北里」文化生活核心枢纽 · 梁林+意式租界双文化融合的慢行生活街区
+            </p>
+            <a href="#about" class="inline-block bg-white text-primary font-bold py-4 px-10 rounded-full hover:bg-secondary hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-opacity-50">
+                了解更多 <i class="fa fa-arrow-down ml-2"></i>
+            </a>
+        </div>
+        <!-- 滚动提示 -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
+            <a href="#about" class="text-white opacity-80 hover:opacity-100 transition-opacity">
+                <i class="fa fa-angle-down text-3xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- 关于北里 -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-primary mb-12 text-center">关于北里</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold text-dark mb-6">项目定位</h3>
+                    <p class="text-gray-600 mb-4">意风区北区「慢享北里」文化生活核心枢纽，定位为「梁林+意式租界双文化融合的慢行生活街区」，以「慢享」为核心体验，串联1号至6号地块，形成「导览-研学-配套-文艺-静享-生活」六大功能分区，打造具有历史文化底蕴、现代生活品质的文化生活枢纽。</p>
+                    <p class="text-gray-600 mb-4">项目依托北区独特的历史建筑资源，结合现代文化创意产业，构建「文化+商业+旅游+生活」四位一体的发展模式，旨在成为天津城市文化新地标、意风区北区复兴的引擎。</p>
+                </div>
+                <div class="bg-light rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold text-primary mb-4">核心优势</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white mr-4 flex-shrink-0">
+                                <i class="fa fa-map-marker text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark mb-1">优越的地理位置</h4>
+                                <p class="text-gray-600">位于意风区北区核心位置，交通便利，周边配套完善，是连接南北区的重要节点。</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white mr-4 flex-shrink-0">
+                                <i class="fa fa-history text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark mb-1">丰富的历史文化资源</h4>
+                                <p class="text-gray-600">区内保留有大量历史建筑，包括梁林建筑集群、意式租界建筑等，文化底蕴深厚。</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white mr-4 flex-shrink-0">
+                                <i class="fa fa-lightbulb-o text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark mb-1">创新的发展理念</h4>
+                                <p class="text-gray-600">以「慢享」为核心，融合文化、商业、旅游、生活等多种功能，打造独特的文化生活体验。</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 理论支撑 -->
+    <section id="theory" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-primary mb-12 text-center">理论支撑</h2>
+            <p class="text-gray-700 text-center mb-12 max-w-3xl mx-auto">以"四大理论协同赋能"为核心，构建高品质城市慢行空间的论证框架</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- TOD理论 -->
+                <div class="bg-light rounded-xl shadow-custom overflow-hidden transition-all duration-300 hover:shadow-custom-hover hover:-translate-y-1">
+                    <div class="h-48 bg-primary flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fa fa-bus text-5xl text-white mb-2"></i>
+                            <h3 class="font-bold text-2xl text-white">TOD理论</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-3">交通锚固与可达性</h3>
+                        <p class="text-gray-600 mb-4">构建"公交站点-慢行廊道-功能节点"三级网络，形成"5分钟步行圈"，提升空间可达性。</p>
+                        <div class="bg-white p-3 rounded-lg mb-4">
+                            <h4 class="font-bold text-primary mb-2">核心指标</h4>
+                            <p class="text-gray-600">公交衔接率：5分钟步行覆盖公交站点≥90%</p>
+                            <p class="text-gray-600">步行可达性：地块间步行时间≤8分钟</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 文化触媒理论 -->
+                <div class="bg-light rounded-xl shadow-custom overflow-hidden transition-all duration-300 hover:shadow-custom-hover hover:-translate-y-1">
+                    <div class="h-48 bg-secondary flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fa fa-lightbulb-o text-5xl text-white mb-2"></i>
+                            <h3 class="font-bold text-2xl text-white">文化触媒理论</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-3">活力激活与记忆锚点</h3>
+                        <p class="text-gray-600 mb-4">通过"文化元素植入、活动策划"，让慢行空间成为文化传播的载体，激发持续活力。</p>
+                        <div class="bg-white p-3 rounded-lg mb-4">
+                            <h4 class="font-bold text-primary mb-2">核心指标</h4>
+                            <p class="text-gray-600">文化节点活力：周边慢行流量比非节点高30%以上</p>
+                            <p class="text-gray-600">停留时间：文化节点平均停留≥15分钟</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 生态社区理论 -->
+                <div class="bg-light rounded-xl shadow-custom overflow-hidden transition-all duration-300 hover:shadow-custom-hover hover:-translate-y-1">
+                    <div class="h-48 bg-green-600 flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fa fa-leaf text-5xl text-white mb-2"></i>
+                            <h3 class="font-bold text-2xl text-white">生态社区理论</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-3">舒适性基底与可持续性</h3>
+                        <p class="text-gray-600 mb-4">构建"绿色慢行廊道"，结合低影响开发，提升步行舒适度与环境质量。</p>
+                        <div class="bg-white p-3 rounded-lg mb-4">
+                            <h4 class="font-bold text-primary mb-2">核心指标</h4>
+                            <p class="text-gray-600">绿化覆盖率：≥35%</p>
+                            <p class="text-gray-600">环境质量：廊道内噪音比城市道路低15dB</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 城市会客厅理论 -->
+                <div class="bg-light rounded-xl shadow-custom overflow-hidden transition-all duration-300 hover:shadow-custom-hover hover:-translate-y-1">
+                    <div class="h-48 bg-blue-600 flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fa fa-users text-5xl text-white mb-2"></i>
+                            <h3 class="font-bold text-2xl text-white">城市会客厅理论</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-3">社交核心与公共属性</h3>
+                        <p class="text-gray-600 mb-4">打造"层级化会客厅节点"，满足集会、交流、休闲等多元社交需求，强化空间的公共价值。</p>
+                        <div class="bg-white p-3 rounded-lg mb-4">
+                            <h4 class="font-bold text-primary mb-2">核心指标</h4>
+                            <p class="text-gray-600">社交活动占比：≥45%</p>
+                            <p class="text-gray-600">空间认同度：高频社交词汇占比≥50%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 理论协同 -->
+            <div class="mt-16 bg-white rounded-lg shadow-lg p-8">
+                <h3 class="text-2xl font-bold text-primary mb-6 text-center">理论协同</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
+                    <div class="bg-light p-5 rounded-xl shadow-sm transition-all duration-300 hover:shadow-md">
+                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-4">
+                            <span class="text-2xl font-bold">1</span>
+                        </div>
+                        <h4 class="font-bold text-primary mb-2">基础层</h4>
+                        <p class="text-gray-600">TOD理论提供"可达性保障"，吸引足够人流</p>
+                    </div>
+                    <div class="bg-light p-5 rounded-xl shadow-sm transition-all duration-300 hover:shadow-md">
+                        <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center text-white mx-auto mb-4">
+                            <span class="text-2xl font-bold">2</span>
+                        </div>
+                        <h4 class="font-bold text-primary mb-2">活力层</h4>
+                        <p class="text-gray-600">文化触媒理论注入"独特性记忆"，延长停留时间</p>
+                    </div>
+                    <div class="bg-light p-5 rounded-xl shadow-sm transition-all duration-300 hover:shadow-md">
+                        <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-white mx-auto mb-4">
+                            <span class="text-2xl font-bold">3</span>
+                        </div>
+                        <h4 class="font-bold text-primary mb-2">支撑层</h4>
+                        <p class="text-gray-600">生态社区理论筑牢"舒适性基底"，提升体验感</p>
+                    </div>
+                    <div class="bg-light p-5 rounded-xl shadow-sm transition-all duration-300 hover:shadow-md">
+                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white mx-auto mb-4">
+                            <span class="text-2xl font-bold">4</span>
+                        </div>
+                        <h4 class="font-bold text-primary mb-2">核心层</h4>
+                        <p class="text-gray-600">城市会客厅理论强化"社交性价值"，实现从"路过"到"停留"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 六境分区 -->
+    <section id="districts" class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-primary mb-12 text-center">六境分区</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 1号地块 -->
+                <div class="bg-white rounded-xl shadow-custom overflow-hidden transition-all duration-300 hover:shadow-custom-hover hover:-translate-y-1">
+                    <div class="relative h-48">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Tourist%20information%20center%20interior%2C%20district%20guide%20wall%2C%20map%20navigation%20area%2C%20modern%20design%2C%20warm%20lighting%2C%20friendly%20atmosphere&image_size=landscape_16_9" alt="1号地块导览境" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                        <div class="absolute inset-0 bg-primary bg-opacity-60 flex items-center justify-center">
+                            <div class="text-center">
+                                <i class="fa fa-map-marker text-5xl text-white mb-2"></i>
+                                <h3 class="font-bold text-2xl text-white">1号地块</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-3">「导览境」</h3>
+                        <p class="text-gray-600 mb-4">慢享北里·南北区联动起点·全域慢行导览枢纽</p>
+                        <a href="district-1.html" class="text-primary hover:text-accent font-bold flex items-center">
+                            查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 2号地块 -->
+                <div class="bg-white rounded-xl shadow-custom overflow-hidden transition-all duration-300 hover:shadow-custom-hover hover:-translate-y-1">
+                    <div class="relative h-48">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Architectural%20research%20center%2C%20Liang%20Sicheng%20and%20Lin%20Huiyin%20architecture%20study%20area%2C%20traditional%20Chinese%20building%20elements%2C%20cultural%20experience%20space%2C%20academic%20atmosphere&image_size=landscape_16_9" alt="2号地块研学境" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                        <div class="absolute inset-0 bg-secondary bg-opacity-60 flex items-center justify-center">
+                            <div class="text-center">
+                                <i class="fa fa-graduation-cap text-5xl text-white mb-2"></i>
+                                <h3 class="font-bold text-2xl text-white">2号地块</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-3">「研学境」</h3>
+                        <p class="text-gray-600 mb-4">慢享北里·梁林建筑研学核心区·近代文化体验高地</p>
+                        <a href="district-2.html" class="text-primary hover:text-accent font-bold flex items-center">
+                            查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 3号地块 -->
+                <div class="bg-white rounded-xl shadow-custom overflow-hidden transition-all duration-300 hover:shadow-custom-hover hover:-translate-y-1">
+                    <div class="relative h-48">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Cultural%20hub%20lounge%2C%20core%20reception%20area%2C%20support%20services%20center%2C%20modern%20comfortable%20design%2C%20warm%20lighting%2C%20welcoming%20atmosphere&image_size=landscape_16_9" alt="3号地块配套境" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                        <div class="absolute inset-0 bg-accent bg-opacity-60 flex items-center justify-center">
+                            <div class="text-center">
+                                <i class="fa fa-building text-5xl text-white mb-2"></i>
+                                <h3 class="font-bold text-2xl text-white">3号地块</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-3">「配套境」</h3>
+                        <p class="text-gray-600 mb-4">慢享北里·核心会客厅·文化配套服务中心</p>
+                        <a href="district-3.html" class="text-primary hover:text-accent font-bold flex items-center">
+                            查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 4号地块 -->
+                <div class="bg-white rounded-xl shadow-custom overflow-hidden transition-all duration-300 hover:shadow-custom-hover hover:-translate-y-1">
+                    <div class="relative h-48">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Italian%20style%20artistic%20space%2C%20cultural%20exhibition%20area%2C%20creative%20studio%2C%20colorful%20artistic%20atmosphere%2C%20modern%20design%20elements&image_size=landscape_16_9" alt="4号地块文艺境" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                        <div class="absolute inset-0 bg-primary bg-opacity-60 flex items-center justify-center">
+                            <div class="text-center">
+                                <i class="fa fa-paint-brush text-5xl text-white mb-2"></i>
+                                <h3 class="font-bold text-2xl text-white">4号地块</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-3">「文艺境」</h3>
+                        <p class="text-gray-600 mb-4">慢享北里·意式文艺体验核心·南北区中途承接枢纽</p>
+                        <a href="district-4.html" class="text-primary hover:text-accent font-bold flex items-center">
+                            查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 5号地块 -->
+                <div class="bg-white rounded-xl shadow-custom overflow-hidden transition-all duration-300 hover:shadow-custom-hover hover:-translate-y-1">
+                    <div class="relative h-48">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Italian%20style%20religious%20building%2C%20church%20exterior%2C%20peaceful%20quiet%20space%2C%20historical%20architecture%2C%20serene%20atmosphere&image_size=landscape_16_9" alt="5号地块静享境" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                        <div class="absolute inset-0 bg-dark bg-opacity-60 flex items-center justify-center">
+                            <div class="text-center">
+                                <i class="fa fa-church text-5xl text-white mb-2"></i>
+                                <h3 class="font-bold text-2xl text-white">5号地块</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-3">「静享境」</h3>
+                        <p class="text-gray-600 mb-4">慢享北里·租界文化静享节点·意式宗教建筑轻研学地</p>
+                        <a href="district-5.html" class="text-primary hover:text-accent font-bold flex items-center">
+                            查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 6号地块 -->
+                <div class="bg-white rounded-xl shadow-custom overflow-hidden transition-all duration-300 hover:shadow-custom-hover hover:-translate-y-1">
+                    <div class="relative h-48">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Community%20commercial%20center%2C%20shared%20living%20space%2C%20service%20hub%2C%20modern%20comfortable%20design%2C%20vibrant%20community%20atmosphere&image_size=landscape_16_9" alt="6号地块生活境" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                        <div class="absolute inset-0 bg-primary bg-opacity-60 flex items-center justify-center">
+                            <div class="text-center">
+                                <i class="fa fa-home text-5xl text-white mb-2"></i>
+                                <h3 class="font-bold text-2xl text-white">6号地块</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-3">「生活境」</h3>
+                        <p class="text-gray-600 mb-4">慢享北里·主客共享生活服务枢纽·社区商业中心</p>
+                        <a href="district-6.html" class="text-primary hover:text-accent font-bold flex items-center">
+                            查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 慢行动线 -->
+    <section id="route" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-primary mb-12 text-center">慢行动线</h2>
+            <div class="bg-light rounded-lg shadow-lg p-8">
+                <h3 class="text-2xl font-bold text-primary mb-6">慢行路线规划</h3>
+                <div class="mb-8">
+                    <p class="text-gray-600 mb-4">「慢享北里」慢行路线以1号地块为起点，串联2号至6号地块，形成环形慢行系统，总长约2公里，步行时间约30分钟。路线设计遵循「慢享」理念，结合历史建筑、文化景观、商业设施，打造适合漫步、游览、休闲的慢行体验。</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-lg shadow-md p-5">
+                        <h4 class="font-bold text-lg text-primary mb-3">主线慢行</h4>
+                        <p class="text-gray-600 mb-3">1号地块 → 2号地块 → 3号地块 → 4号地块 → 5号地块 → 6号地块 → 1号地块</p>
+                        <p class="text-gray-600">全程2公里，步行约30分钟，适合全天游览</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-5">
+                        <h4 class="font-bold text-lg text-primary mb-3">半日游路线</h4>
+                        <p class="text-gray-600 mb-3">1号地块 → 2号地块 → 4号地块 → 5号地块</p>
+                        <p class="text-gray-600">全程1.2公里，步行约18分钟，适合上午或下午游览</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-5">
+                        <h4 class="font-bold text-lg text-primary mb-3">主题游路线</h4>
+                        <p class="text-gray-600 mb-3">文化研学路线：1号地块 → 2号地块 → 5号地块</p>
+                        <p class="text-gray-600">文艺休闲路线：4号地块 → 6号地块 → 1号地块</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心价值 -->
+    <section id="value" class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-primary mb-12 text-center">核心价值</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-xl shadow-custom p-6 text-center transition-all duration-300 hover:shadow-custom-hover hover:-translate-y-1">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-4">
+                        <i class="fa fa-history text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">历史文化传承</h3>
+                    <p class="text-gray-600">保护和利用北区历史建筑资源，传承梁林建筑文化和意式租界文化，打造具有历史记忆的文化空间。</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-custom p-6 text-center transition-all duration-300 hover:shadow-custom-hover hover:-translate-y-1">
+                    <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center text-white mx-auto mb-4">
+                        <i class="fa fa-lightbulb-o text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">文化创意融合</h3>
+                    <p class="text-gray-600">结合现代文化创意产业，赋予历史建筑新的功能和价值，推动文化与商业、旅游、生活的融合发展。</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-custom p-6 text-center transition-all duration-300 hover:shadow-custom-hover hover:-translate-y-1">
+                    <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center text-white mx-auto mb-4">
+                        <i class="fa fa-users text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">社区生活提升</h3>
+                    <p class="text-gray-600">打造主客共享的生活服务枢纽，提升周边社区居民的生活品质，增强社区凝聚力。</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-custom p-6 text-center transition-all duration-300 hover:shadow-custom-hover hover:-translate-y-1">
+                    <div class="w-16 h-16 bg-dark rounded-full flex items-center justify-center text-white mx-auto mb-4">
+                        <i class="fa fa-line-chart text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">区域经济带动</h3>
+                    <p class="text-gray-600">通过文化旅游、商业运营等方式，带动意风区北区的经济发展，成为区域复兴的引擎。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 南北区对比 -->
+    <section id="comparison" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-primary mb-12 text-center">南北区对比分析</h2>
+            <div class="bg-light rounded-lg shadow-lg p-8 mb-10">
+                <h3 class="text-2xl font-bold text-primary mb-6">北区六大板块综合业态对比南区的核心优势</h3>
+                <p class="text-gray-600 mb-8">先明确<strong>南北区核心定位本质差异</strong>：南区业态以<strong>纯文旅开放型体验</strong>为核心，重游客引流、重网红打卡，业态单一且呈"线性串联"，缺乏生活配套与主客共享设计，是典型的"旅游导向型"业态体系；而北区1-6号六大板块是<strong>"文化核心+体验赋能+配套支撑+生活补给"的复合型业态闭环</strong>，以2号（研学）、4号（文艺）为文化双核心，1号（导览）、6号（生活）为全域支撑，3号（配套）、5号（静享）为精准补位，叠加2-4号地块「底部架空+小型广场」的空间改造，完全契合《主客共享视角下历史街区业态优化路径研究》《历史街区空间句法与步行流线优化研究》《历史建筑再利用的业态适配性评估体系研究》等论文的核心研究结论，从<strong>主客共享、业态闭环、空间联动、运营可持续、文化活化</strong>五大维度形成碾压式优势，破解了南区纯文旅业态的行业痛点。</p>
+            </div>
+            
+            <!-- 维度1：主客共享 -->
+            <div class="bg-light rounded-lg shadow-lg p-8 mb-10">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mr-4">
+                        <i class="fa fa-users text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-primary">一、主客共享的深度适配：破解南区"重游客、轻居民"的核心矛盾</h3>
+                </div>
+                <p class="text-gray-600 mb-4"><strong>论文核心结论：</strong>历史街区文旅改造的终极目标是"主客双赢"，纯游客导向的业态体系会导致社区认同感缺失，最终失去街区本土活力。</p>
+                <p class="text-gray-600 mb-4"><strong>南区短板：</strong>业态完全围绕游客打造，无本地居民的生活配套空间，居民与游客形成"空间割裂"，既让居民失去对街区的归属感，也让游客体验不到本土生活氛围，沦为"走马观花式打卡"。</p>
+                <p class="text-gray-600 mb-4"><strong>北区优势：</strong>以<strong>6号生活境</strong>为核心打造「主客共享补给体系」，轻餐饮、便民服务既满足游客全域消费补给，又服务本地居民日常生活；同时3号研学配套、5号静享境实行<strong>"高峰保游客、低峰惠居民"</strong>的分层运营（工作日高峰服务研学/体验客群，非高峰对居民开放研讨室、静读空间），1号导览境的便民休憩区也为居民提供日常休闲空间。北区六大板块实现了<strong>"文旅体验不打折、居民生活有保障"</strong>的深度主客共享，而非南区的"表面共享"。</p>
+            </div>
+            
+            <!-- 维度2：业态闭环 -->
+            <div class="bg-light rounded-lg shadow-lg p-8 mb-10">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-white mr-4">
+                        <i class="fa fa-link text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-primary">二、业态体系的全域闭环：破解南区"线性串联、体验碎片化、转化率低"的痛点</h3>
+                </div>
+                <p class="text-gray-600 mb-4"><strong>论文核心结论：</strong>业态闭环是提升历史街区文旅商业价值的核心逻辑，单一的线性业态串联会导致客群停留时间短、体验碎片化、商业转化率低。</p>
+                <p class="text-gray-600 mb-4"><strong>南区短板：</strong>业态呈"单点体验-线性打卡"模式，各业态间无互补、无联动，游客完成一个体验后无继续停留的动力，商业仅停留在"单次打卡消费"，全域转化率极低。</p>
+                <p class="text-gray-600 mb-4"><strong>北区优势：</strong>六大板块形成<strong>"流量入口-文化核心-精准配套-体验延伸-静谧补位-全域补给"的完整业态闭环</strong>：1号导览境作为流量入口，将人流精准输送至2号研学、4号文艺双核心；3号配套境为2号研学做刚需配套，实现研学体验的"从参观到深化"；5号静享境为4号文艺体验做小众延伸，弥补"热闹体验"的空白；6号生活境作为全域补给核心，承接所有板块的消费需求，让客群从"单一体验"变成"全域停留"。</p>
+            </div>
+            
+            <!-- 维度3：空间联动 -->
+            <div class="bg-light rounded-lg shadow-lg p-8 mb-10">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-white mr-4">
+                        <i class="fa fa-map text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-primary">三、空间联动的科学优化：破解南区"建筑遮挡、视线/人流割裂"的空间痛点</h3>
+                </div>
+                <p class="text-gray-600 mb-4"><strong>论文核心结论：</strong>历史街区的空间价值在于"视线互通、人流顺畅"，建筑遮挡导致的空间割裂，会直接破坏业态联动与体验连贯性。</p>
+                <p class="text-gray-600 mb-4"><strong>南区短板：</strong>未做空间优化设计，建筑遮挡严重，各业态间视线不通、人流绕行，形成"空间孤岛"，即便有业态联动，也因空间阻隔难以落地。</p>
+                <p class="text-gray-600 mb-4"><strong>北区优势：</strong>两大空间设计直击南区痛点：①针对2、4号核心地块间的建筑遮挡，做<strong>底部架空+小型广场</strong>改造，破除视线与人流阻隔，实现两大地块的"视线通廊+动线无缝衔接"，让研学客群能平滑过渡到文艺体验；②利用北区「临街开放、内部隔离」的空间特征（1-3号地块临街体量型视觉隔离、4-5号地块内部视觉静谧区），打造<strong>"临街引流、内部体验"</strong>的空间布局，既保障了1、2、4号临街面的游客吸引性，又为研学、研讨、静享打造了静谧的内部空间。</p>
+            </div>
+            
+            <!-- 维度4：运营可持续 -->
+            <div class="bg-light rounded-lg shadow-lg p-8 mb-10">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-dark rounded-full flex items-center justify-center text-white mr-4">
+                        <i class="fa fa-line-chart text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-primary">四、运营模式的可持续性：破解南区"重资产、高成本、客流波动大"的运营难题</h3>
+                </div>
+                <p class="text-gray-600 mb-4"><strong>论文核心结论：</strong>历史建筑业态落地需遵循"轻资产、低干扰、刚需适配"原则，重资产的纯体验业态易受客流波动影响，运营可持续性差。</p>
+                <p class="text-gray-600 mb-4"><strong>南区短板：</strong>业态以重资产文旅体验为主，设备采购、场地改造、人力成本高，且客流高度依赖旅游旺季，淡季易出现"运营成本高于营收"的问题，同时过度商业化改造易破坏历史建筑肌理。</p>
+                <p class="text-gray-600 mb-4"><strong>北区优势：</strong>六大板块采用<strong>"核心体验轻资产、配套业态刚需型"</strong>的分层运营模式：①2、4号文化核心地块，仅做轻量体验改造（不破坏建筑结构），手作工坊、研学展馆均为小体量、轻运营；②1、3、6号支撑/配套地块，以<strong>刚需型轻运营</strong>为主（导览、研学配套、便民补给），客群精准且稳定，无需做大规模流量引流，现金流不受旅游旺季影响；③5号静享境为"低干扰、轻商业"模式，几乎无运营成本。</p>
+            </div>
+            
+            <!-- 维度5：文化活化 -->
+            <div class="bg-light rounded-lg shadow-lg p-8 mb-10">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mr-4">
+                        <i class="fa fa-lightbulb-o text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-primary">五、文化活化的立体落地：破解南区"文化浅表化、打卡式体验"的文化痛点</h3>
+                </div>
+                <p class="text-gray-600 mb-4"><strong>论文核心结论：</strong>历史街区的文化价值是核心竞争力，浅表化的"文化打卡"会让街区失去独特性，真正的文化活化是"文化落地到业态、体验深入到人心"。</p>
+                <p class="text-gray-600 mb-4"><strong>南区短板：</strong>文化仅作为"装饰元素"，业态与文化脱节，游客只能通过拍照、参观感受文化，无法形成深度体验，最终沦为"千街一面"的网红打卡地，文化活化流于表面。</p>
+                <p class="text-gray-600 mb-4"><strong>北区优势：</strong>以<strong>梁林建筑文化、意式租界文化</strong>为双核心，实现<strong>"文化与业态的深度融合、文化体验的分层落地"</strong>：2号研学境做<strong>专业文化深挖</strong>，通过展馆、研学工坊让建筑爱好者、研学团队深度了解梁林文化；4号文艺境做<strong>大众文化体验</strong>，通过意式手作、微剧场让普通游客沉浸式感受意式文化；3号配套境为文化研学做配套延伸，5号静享境做<strong>小众文化轻体验</strong>，让追求静谧的客群感受宗教建筑与租界文化的融合。</p>
+            </div>
+            
+            <!-- 核心总结 -->
+            <div class="bg-light rounded-lg shadow-lg p-8">
+                <h3 class="text-2xl font-bold text-primary mb-6">核心总结</h3>
+                <p class="text-gray-600 mb-4">北区1-6号六大板块综合业态的核心优势，并非简单的"业态更多、体验更全"，而是<strong>从"纯文旅打卡"到"文旅+生活"的业态体系升级</strong>，精准破解了南区纯游客导向、线性业态、空间割裂、运营不可持续、文化浅表化的五大行业痛点。</p>
+                <p class="text-gray-600 mb-4">其业态体系完全遵循历史街区更新、主客共享、空间句法、文化活化的相关论文核心结论，以<strong>2、4号文化双核心</strong>为灵魂，以<strong>业态闭环、空间联动</strong>为骨架，以<strong>主客共享、轻资产运营</strong>为血肉，打造了一个"文化有深度、体验有层次、配套有保障、生活有温度、运营可持续"的复合型业态体系。</p>
+                <p class="text-gray-600">这种体系不仅让北区成为比南区更具活力的历史街区样本，更契合当代历史街区文旅改造的<strong>主流趋势</strong>——从"重旅游"到"重共生"，从"重打卡"到"重体验"，从"单点业态"到"全域闭环"，这也是北区对比南区最核心、最不可复制的优势。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-primary mb-12 text-center">联系我们</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-light rounded-xl shadow-custom p-8 transition-all duration-300 hover:shadow-custom-hover">
+                    <h3 class="text-2xl font-bold text-primary mb-6">联系方式</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker text-secondary mt-1 mr-4"></i>
+                            <span>天津市和平区意风区北区「慢享北里」文化生活枢纽</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-phone text-secondary mt-1 mr-4"></i>
+                            <span>022-12345678</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-envelope text-secondary mt-1 mr-4"></i>
+                            <span>info@manxiangbeili.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-weixin text-secondary mt-1 mr-4"></i>
+                            <span>慢享北里文化生活枢纽</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-light rounded-xl shadow-custom p-8 transition-all duration-300 hover:shadow-custom-hover">
+                    <h3 class="text-2xl font-bold text-primary mb-6">留言咨询</h3>
+                    <form>
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-bold mb-2">姓名</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-bold mb-2">邮箱</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 font-bold mb-2">留言</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                        </div>
+                        <button type="submit" class="bg-primary text-white font-bold py-3 px-8 rounded-lg hover:bg-secondary transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-opacity-50">
+                            提交留言
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary hover:bg-accent text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all-300 opacity-0 invisible">
+        <i class="fa fa-angle-up text-2xl"></i>
+    </button>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <i class="fa fa-map-marker text-secondary text-xl"></i>
+                        <span class="text-xl font-bold">慢享北里</span>
+                        <span class="text-sm opacity-70">文化生活枢纽</span>
+                    </div>
+                    <p class="mt-2 text-sm opacity-70">© 2026 慢享北里文化生活枢纽. 保留所有权利.</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-white hover:text-secondary transition-all-300">
+                        <i class="fa fa-weixin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-secondary transition-all-300">
+                        <i class="fa fa-weibo text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-secondary transition-all-300">
+                        <i class="fa fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 返回顶部按钮
+        const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // 导航栏滚动效果
+        const navbar = document.querySelector('nav');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 50) {
+                navbar.classList.add('py-2');
+                navbar.classList.remove('py-3');
+                navbar.classList.add('shadow-xl');
+            } else {
+                navbar.classList.add('py-3');
+                navbar.classList.remove('py-2');
+                navbar.classList.remove('shadow-xl');
+            }
+        });
+
+        // 元素进入视口时的动画
+        const animateOnScroll = function() {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+            const windowHeight = window.innerHeight;
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                if (elementTop < windowHeight * 0.85) {
+                    element.classList.add('animate-fade-in');
+                }
+            });
+        };
+
+        // 添加动画类
+        document.querySelectorAll('section > div.container').forEach(container => {
+            container.classList.add('animate-on-scroll');
+        });
+
+        // 初始化动画
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+    </script>
+</body>
+</html>

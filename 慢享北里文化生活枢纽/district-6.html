@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>北区主客共享生活服务枢纽 - 6号地块 | 慢享北里</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8B4513',
+                        secondary: '#D2B48C',
+                        accent: '#A0522D',
+                        light: '#F5F5DC',
+                        dark: '#3E2723'
+                    },
+                    fontFamily: {
+                        serif: ['SimSun', 'STSong', 'serif'],
+                        sans: ['PingFang SC', 'Microsoft YaHei', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            }
+            .transition-custom {
+                transition: all 0.3s ease-in-out;
+            }
+            .hover-lift {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .hover-lift:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
+        }
+    </style>
+</head>
+<body class="bg-light font-sans text-dark">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-primary font-serif text-2xl font-bold flex items-center">
+                    <i class="fa fa-map-signs mr-2"></i>
+                    慢享北里·文化生活枢纽
+                </a>
+                <div class="hidden md:flex space-x-6">
+                    <a href="index.html" class="text-dark hover:text-primary transition-custom">首页</a>
+                    <a href="index.html#routes" class="text-dark hover:text-primary transition-custom">慢游路线</a>
+                    <a href="index.html#about" class="text-dark hover:text-primary transition-custom">关于我们</a>
+                </div>
+                <button class="md:hidden text-dark focus:outline-none">
+                    <i class="fa fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 头部区域 -->
+    <header class="pt-24 pb-12 bg-cover bg-center" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=traditional%20chinese%20courtyard%20with%20modern%20service%20hub%2C%20cultural%20center%20in%20old%20beijing%20hutong%2C%20warm%20lighting%2C%20autumn%20atmosphere&image_size=landscape_16_9');">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-serif text-white font-bold mb-4 text-shadow">北区主客共享生活服务枢纽</h1>
+            <p class="text-xl md:text-2xl text-white mb-8">6号地块 · 邻里共享空间</p>
+            <div class="flex justify-center space-x-4">
+                <a href="index.html" class="bg-primary hover:bg-accent text-white px-6 py-3 rounded-lg transition-custom flex items-center">
+                    <i class="fa fa-arrow-left mr-2"></i> 返回首页
+                </a>
+                <a href="#details" class="bg-white hover:bg-secondary text-primary px-6 py-3 rounded-lg transition-custom flex items-center">
+                    查看详情 <i class="fa fa-arrow-down ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 详细信息 -->
+    <section id="details" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="mb-12">
+                <h2 class="text-3xl font-serif text-primary font-bold mb-6 text-center">地块详情</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-light p-6 rounded-lg shadow-md hover-lift">
+                        <h3 class="text-xl font-bold mb-4 text-primary flex items-center">
+                            <i class="fa fa-map-marker mr-2"></i> 地块位置
+                        </h3>
+                        <p class="mb-4">位于北区核心位置，靠近主要交通节点，是连接周边社区的重要枢纽。</p>
+                        <div class="bg-white p-4 rounded-md">
+                            <p class="font-bold">区域：北区</p>
+                            <p>编号：6号地块</p>
+                            <p>面积：约1000平方米</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-light p-6 rounded-lg shadow-md hover-lift">
+                        <h3 class="text-xl font-bold mb-4 text-primary flex items-center">
+                            <i class="fa fa-bullseye mr-2"></i> 核心定位
+                        </h3>
+                        <p class="mb-4">6号地块位于意风区北区"4号文艺体验核心—2号梁林研学高地—5号静享集群"的生活配套辐射圈，定位为<strong>"社区便民服务中心+游客补给驿站+轻量消费载体"</strong>，核心是填补北区"生活功能空白"，既满足本地居民日常需求，又承接周边地块研学、文艺、静享人群的补给与消费需求，与其他地块形成"体验-补给-生活"的功能闭环，全程遵循"轻改造、主客共享、低干扰"原则。</p>
+                        <div class="bg-white p-4 rounded-md">
+                            <p class="font-bold">功能：社区便民服务、游客补给、轻量消费</p>
+                            <p>特色：主客共享、低干扰、轻改造</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 客群定位 -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-serif text-primary font-bold mb-6">客群定位</h3>
+                <div class="bg-light p-6 rounded-lg shadow-md">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-white p-4 rounded-md hover-lift">
+                            <h4 class="font-bold mb-2 flex items-center">
+                                <i class="fa fa-users text-primary mr-2"></i> 本地居民
+                            </h4>
+                            <p>周边社区居民，需要日常生活服务和社区活动空间</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-md hover-lift">
+                            <h4 class="font-bold mb-2 flex items-center">
+                                <i class="fa fa-briefcase text-primary mr-2"></i> 商务人士
+                            </h4>
+                            <p>在附近工作的商务人士，需要临时办公和休闲空间</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-md hover-lift">
+                            <h4 class="font-bold mb-2 flex items-center">
+                                <i class="fa fa-globe text-primary mr-2"></i> 游客
+                            </h4>
+                            <p>来此区域游览的游客，需要信息咨询和休息空间</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 目标市场 -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-serif text-primary font-bold mb-6">目标市场</h3>
+                <div class="bg-light p-6 rounded-lg shadow-md">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white p-4 rounded-md hover-lift">
+                            <h4 class="font-bold mb-2 flex items-center">
+                                <i class="fa fa-home text-primary mr-2"></i> 社区服务市场
+                            </h4>
+                            <p>满足周边居民的日常生活需求，提供便捷的社区服务</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-md hover-lift">
+                            <h4 class="font-bold mb-2 flex items-center">
+                                <i class="fa fa-coffee text-primary mr-2"></i> 休闲消费市场
+                            </h4>
+                            <p>为商务人士和游客提供休闲、餐饮、社交空间</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 价格策略 -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-serif text-primary font-bold mb-6">价格策略</h3>
+                <div class="bg-light p-6 rounded-lg shadow-md">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-white p-4 rounded-md hover-lift border-l-4 border-primary">
+                            <h4 class="font-bold mb-2">基础服务</h4>
+                            <p class="text-2xl font-bold text-primary mb-2">免费</p>
+                            <p>社区信息咨询、休息空间使用</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-md hover-lift border-l-4 border-secondary">
+                            <h4 class="font-bold mb-2">增值服务</h4>
+                            <p class="text-2xl font-bold text-primary mb-2">¥20-50/次</p>
+                            <p>临时办公空间、会议室使用</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-md hover-lift border-l-4 border-accent">
+                            <h4 class="font-bold mb-2">会员服务</h4>
+                            <p class="text-2xl font-bold text-primary mb-2">¥299/月</p>
+                            <p>无限次使用所有服务空间</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 商业模式 -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-serif text-primary font-bold mb-6">商业模式</h3>
+                <div class="bg-light p-6 rounded-lg shadow-md">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white p-4 rounded-md hover-lift">
+                            <h4 class="font-bold mb-2 flex items-center">
+                                <i class="fa fa-shopping-bag text-primary mr-2"></i> 服务收费
+                            </h4>
+                            <p>向使用者收取场地使用费和服务费</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-md hover-lift">
+                            <h4 class="font-bold mb-2 flex items-center">
+                                <i class="fa fa-handshake-o text-primary mr-2"></i> 合作分成
+                            </h4>
+                            <p>与入驻商家和服务提供商进行收益分成</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-md hover-lift">
+                            <h4 class="font-bold mb-2 flex items-center">
+                                <i class="fa fa-calendar text-primary mr-2"></i> 活动策划
+                            </h4>
+                            <p>组织社区活动和文化活动，收取活动费用</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-md hover-lift">
+                            <h4 class="font-bold mb-2 flex items-center">
+                                <i class="fa fa-bullhorn text-primary mr-2"></i> 品牌合作
+                            </h4>
+                            <p>与品牌企业合作，提供场地和推广服务</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 业态规划 -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-serif text-primary font-bold mb-6">业态规划</h3>
+                
+                <!-- 模块1：社区便民+游客补给复合服务 -->
+                <div class="bg-white rounded-lg shadow-lg p-8 mb-10">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mr-4">
+                            <i class="fa fa-map-marker text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary">模块1：社区便民+游客补给复合服务（占比40%）—— 填补北区功能空白</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">其他地块聚焦文化、研学、文艺，6号地块主打"实用型服务"，解决"居民生活不便、游客临时需求"的痛点。</p>
+                    
+                    <div class="mb-8">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Community%20service%20center%20interior%20with%20convenient%20services%2C%20tourist%20supply%20station%2C%20small%20grocery%20section%2C%20luggage%20storage%20lockers%2C%20charging%20stations%2C%20warm%20lighting%2C%20modern%20design%2C%20friendly%20atmosphere&image_size=landscape_16_9" alt="社区便民+游客补给复合服务" class="w-full h-64 md:h-80 object-cover rounded-lg shadow-md mb-4">
+                        <p class="text-sm text-center text-gray-500">社区便民+游客补给复合服务场景</p>
+                    </div>
+                    
+                    <div class="overflow-x-auto mb-8">
+                        <table class="w-full border-collapse">
+                            <thead>
+                                <tr class="bg-light">
+                                    <th class="border border-gray-300 p-3 text-left">空间功能</th>
+                                    <th class="border border-gray-300 p-3 text-left">具体落地</th>
+                                    <th class="border border-gray-300 p-3 text-left">运营方式</th>
+                                    <th class="border border-gray-300 p-3 text-left">适配亮点</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-gray-300 p-3 font-bold">社区便民服务站</td>
+                                    <td class="border border-gray-300 p-3">
+                                        <ul class="list-disc list-inside space-y-1">
+                                            <li>基础便民：设置生鲜超市（小型，主打果蔬、粮油、日用品）、便民洗衣店（干洗+快洗）、医药便民柜（常用药、急救用品）</li>
+                                            <li>生活配套：引入"天津本地生活服务窗口"（代收快递、打印复印、水电费代缴）</li>
+                                            <li>老年友好服务：配备简易休息座椅、免费饮水、老花镜租借，方便周边居民日常使用</li>
+                                        </ul>
+                                    </td>
+                                    <td class="border border-gray-300 p-3">生鲜超市、洗衣店正常收费（平价），基础便民服务免费，医药柜扫码自助购买</td>
+                                    <td class="border border-gray-300 p-3">空间布局贴近入口，方便居民快速抵达；设施均为可移动/模块化，不破坏建筑本体</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 p-3 font-bold">游客临时补给站</td>
+                                    <td class="border border-gray-300 p-3">
+                                        <ul class="list-disc list-inside space-y-1">
+                                            <li>出行补给：提供手机充电（快充+无线充）、行李寄存柜（小柜10元/次、大柜20元/次）、雨伞租借（押金50元）</li>
+                                            <li>研学专属补给：针对2号/5号研学人群，提供简易文具（铅笔、笔记本）、便携餐食（面包、酸奶、矿泉水）、研学资料打印</li>
+                                            <li>咨询引导：配备1名工作人员，提供北区路线咨询、周边地块活动预告（如2号研学营、4号市集）</li>
+                                        </ul>
+                                    </td>
+                                    <td class="border border-gray-300 p-3">基础补给免费，租借/打印收费（成本价），研学人群凭相关凭证享寄存8折优惠</td>
+                                    <td class="border border-gray-300 p-3">占用空间小（约20㎡），位于便民服务站旁，游客可快速补给后继续游览</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- 模块2：本地特色轻餐饮+休闲社交 -->
+                <div class="bg-white rounded-lg shadow-lg p-8 mb-10">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-white mr-4">
+                            <i class="fa fa-coffee text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary">模块2：本地特色轻餐饮+休闲社交（占比35%）—— 主客共享的日常消费场景</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">差异化于4号意式轻食、2号主题茶座，主打"天津本地风味+家常简餐"，适配日常高频消费。</p>
+                    
+                    <div class="mb-8">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Tianjin%20local%20flavor%20restaurant%20interior%2C%20traditional%20Chinese%20snacks%2C%20homestyle%20cuisine%2C%20casual%20tea%20house%20area%2C%20Tianjin%20cultural%20decorations%2C%20warm%20lighting%2C%20comfortable%20seating%2C%20friendly%20atmosphere&image_size=landscape_16_9" alt="本地特色轻餐饮+休闲社交" class="w-full h-64 md:h-80 object-cover rounded-lg shadow-md mb-4">
+                        <p class="text-sm text-center text-gray-500">本地特色轻餐饮+休闲社交场景</p>
+                    </div>
+                    
+                    <div class="overflow-x-auto mb-8">
+                        <table class="w-full border-collapse">
+                            <thead>
+                                <tr class="bg-light">
+                                    <th class="border border-gray-300 p-3 text-left">业态内容</th>
+                                    <th class="border border-gray-300 p-3 text-left">具体落地</th>
+                                    <th class="border border-gray-300 p-3 text-left">运营方式</th>
+                                    <th class="border border-gray-300 p-3 text-left">改造要求</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-gray-300 p-3 font-bold">天津本地风味小馆</td>
+                                    <td class="border border-gray-300 p-3">
+                                        <ul class="list-disc list-inside space-y-1">
+                                            <li>主打天津传统小吃+家常简餐（如煎饼果子、熟梨糕、老豆腐、天津菜小炒），避免重油烟</li>
+                                            <li>推出"游客尝鲜套餐"（3-4种特色小吃组合，38元/份）、"居民日常套餐"（家常两菜一汤，25元/份）</li>
+                                            <li>设置"户外简易休憩区"（4组双人桌），搭配天津特色装饰（如杨柳青年画元素、租界老照片）</li>
+                                        </ul>
+                                    </td>
+                                    <td class="border border-gray-300 p-3">营业时间7:00-20:00（适配居民早餐、游客正餐需求），人均消费20-40元，2号/5号研学团队可批量预订团餐</td>
+                                    <td class="border border-gray-300 p-3">室内做基础防潮处理，厨具采用电加热（无明火），外摆设施为可移动桌椅，不破坏地面</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 p-3 font-bold">家常休闲茶座</td>
+                                    <td class="border border-gray-300 p-3">
+                                        <ul class="list-disc list-inside space-y-1">
+                                            <li>提供天津花茶、本地果饮、低糖点心（如驴打滚、艾窝窝），无嘈杂商业氛围</li>
+                                            <li>软装主打"老天津生活场景"（墙面挂老天津街景照片、摆放老式暖水瓶、搪瓷杯等道具）</li>
+                                            <li>设置"邻里交流角"，定期举办"天津租界故事分享会"（每月1场，邀请本地老人主讲）</li>
+                                        </ul>
+                                    </td>
+                                    <td class="border border-gray-300 p-3">人均消费15-30元，分享会免费开放（需提前预约），营造"邻里小聚、游客小憩"的轻松氛围</td>
+                                    <td class="border border-gray-300 p-3">位于建筑二层或庭院，空间安静，适合休闲交流；家具均为可移动款式，不固定在墙面/地面</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- 模块3：本地生活+研学纪念主题零售 -->
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-white mr-4">
+                            <i class="fa fa-shopping-bag text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary">模块3：本地生活+研学纪念主题零售（占比25%）—— 差异化文创消费</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">不重复4号意式文创、2号梁林IP文创，聚焦"实用型+本地特色"，适配居民日常与游客伴手礼需求。</p>
+                    
+                    <div class="mb-8">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Local%20life%20retail%20store%20interior%2C%20Tianjin%20local%20products%2C%20study%20tour%20souvenirs%2C%20practical%20cultural%20creative%20products%2C%20neighborhood%20handmade%20items%2C%20warm%20lighting%2C%20organized%20shelves%2C%20friendly%20atmosphere&image_size=landscape_16_9" alt="本地生活+研学纪念主题零售" class="w-full h-64 md:h-80 object-cover rounded-lg shadow-md mb-4">
+                        <p class="text-sm text-center text-gray-500">本地生活+研学纪念主题零售场景</p>
+                    </div>
+                    
+                    <div class="overflow-x-auto mb-8">
+                        <table class="w-full border-collapse">
+                            <thead>
+                                <tr class="bg-light">
+                                    <th class="border border-gray-300 p-3 text-left">产品类别</th>
+                                    <th class="border border-gray-300 p-3 text-left">具体落地</th>
+                                    <th class="border border-gray-300 p-3 text-left">运营方式</th>
+                                    <th class="border border-gray-300 p-3 text-left">适配逻辑</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-gray-300 p-3 font-bold">天津本地生活好物</td>
+                                    <td class="border border-gray-300 p-3">
+                                        <ul class="list-disc list-inside space-y-1">
+                                            <li>实用型：天津本地特产（小包装麻花、耳朵眼炸糕、本地酱料）、老天津日用品（搪瓷杯、传统手工艺皂）</li>
+                                            <li>非遗衍生：迷你杨柳青年画、泥人张钥匙扣、风筝魏小型风筝（平价款，20-50元/件）</li>
+                                        </ul>
+                                    </td>
+                                    <td class="border border-gray-300 p-3">明码标价，平价销售，居民可办理会员享9折，游客凭1号导览手册享9.5折</td>
+                                    <td class="border border-gray-300 p-3">适配居民日常购买、游客随手伴手礼需求，差异化于其他地块的文艺/IP类文创</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 p-3 font-bold">研学纪念实用款</td>
+                                    <td class="border border-gray-300 p-3">
+                                        <ul class="list-disc list-inside space-y-1">
+                                            <li>联动2号/5号：推出"研学实用套装"（含测绘铅笔、定制笔记本、北区路线手绘地图）</li>
+                                            <li>纪念款：印有北区核心节点（2号、4号、5号）图案的环保袋、马克杯、冰箱贴（30-80元/件）</li>
+                                        </ul>
+                                    </td>
+                                    <td class="border border-gray-300 p-3">研学套装捆绑销售（58元/套），纪念款可定制（如刻字），2号/5号研学学员享8折优惠</td>
+                                    <td class="border border-gray-300 p-3">承接研学人群的纪念需求，产品侧重实用，避免过度商业化，贴合地块"生活服务"定位</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 p-3 font-bold">邻里共享好物寄卖</td>
+                                    <td class="border border-gray-300 p-3">引入"本地居民手作寄卖区"（如手工酱菜、编织品、老物件复刻），打造"邻里互助+游客淘货"的特色场景</td>
+                                    <td class="border border-gray-300 p-3">寄卖抽成10%-15%，每月更新产品，标注手作者故事，增强情感连接</td>
+                                    <td class="border border-gray-300 p-3">强化社区属性，让地块成为居民与游客的互动桥梁，区别于纯商业零售</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 空间联动与运营管理 -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-serif text-primary font-bold mb-6">空间联动与运营管理</h3>
+                
+                <!-- 内部空间分配 -->
+                <div class="bg-white rounded-lg shadow-lg p-8 mb-10">
+                    <h4 class="text-xl font-bold text-primary mb-6">1. 内部空间分配（适配中小体量洋楼/庭院肌理）</h4>
+                    
+                    <div class="overflow-x-auto mb-8">
+                        <table class="w-full border-collapse">
+                            <thead>
+                                <tr class="bg-light">
+                                    <th class="border border-gray-300 p-3 text-left">空间类型</th>
+                                    <th class="border border-gray-300 p-3 text-left">用途</th>
+                                    <th class="border border-gray-300 p-3 text-left">改造原则</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-gray-300 p-3 font-bold">建筑一层（前区）</td>
+                                    <td class="border border-gray-300 p-3">社区便民服务站+游客补给站+本地风味小馆</td>
+                                    <td class="border border-gray-300 p-3">保留原有门窗、墙面肌理，采用模块化货架/展柜（可移动），地面铺防滑地垫</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 p-3 font-bold">建筑一层（后区）</td>
+                                    <td class="border border-gray-300 p-3">本地生活+研学纪念主题零售</td>
+                                    <td class="border border-gray-300 p-3">用可移动隔断划分空间，墙面不打孔（展示用无痕胶），照明采用暖光节能灯</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 p-3 font-bold">建筑二层/庭院</td>
+                                    <td class="border border-gray-300 p-3">家常休闲茶座+邻里交流角</td>
+                                    <td class="border border-gray-300 p-3">庭院保留原有绿植，增设可移动座椅、遮阳伞；二层做基础防潮处理，不改动建筑结构</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- 与周边地块联动 -->
+                <div class="bg-white rounded-lg shadow-lg p-8 mb-10">
+                    <h4 class="text-xl font-bold text-primary mb-6">2. 与周边地块联动（强化北区功能闭环）</h4>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-light p-6 rounded-lg">
+                            <h5 class="font-bold text-lg text-primary mb-3">与4号文艺核心</h5>
+                            <p class="text-gray-600">4号的文艺人群可来6号品尝本地风味简餐，6号的"天津租界故事分享会"可邀请4号艺术专家联动主讲；4号市集可增设"6号本地好物专区"。</p>
+                        </div>
+                        <div class="bg-light p-6 rounded-lg">
+                            <h5 class="font-bold text-lg text-primary mb-3">与2号/5号研学地块</h5>
+                            <p class="text-gray-600">推出"研学+补给"联名套餐（2号/5号研学课程+6号简餐+实用套装，128元/人），6号为研学团队提供团餐预订、资料打印服务。</p>
+                        </div>
+                        <div class="bg-light p-6 rounded-lg">
+                            <h5 class="font-bold text-lg text-primary mb-3">与1号导流驿站</h5>
+                            <p class="text-gray-600">1号导览手册标注"6号地块生活补给站"，步行路线（6分钟直达），散客凭1号优惠券可享6号餐饮9折；6号设置"北区核心节点导览角"，引导居民/游客前往其他地块。</p>
+                        </div>
+                        <div class="bg-light p-6 rounded-lg">
+                            <h5 class="font-bold text-lg text-primary mb-3">与南区自由道</h5>
+                            <p class="text-gray-600">差异化互补（南区重商业+6号生活化服务），在南区设置"北区生活体验指引牌"，吸引想感受本地生活的游客向北延伸。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 运营核心细则 -->
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h4 class="text-xl font-bold text-primary mb-6">3. 运营核心细则</h4>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h5 class="font-bold text-lg text-primary mb-4">（1）开放与服务</h5>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fa fa-clock-o text-secondary mt-1 mr-3"></i>
+                                    <span><strong>常规开放：</strong>周一至周日 7:00-20:00（适配居民早餐、游客全天需求）</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-calendar text-secondary mt-1 mr-3"></i>
+                                    <span><strong>特殊调整：</strong>节假日延长至21:00，研学旺季（寒暑假）增设1名补给站工作人员</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-book text-secondary mt-1 mr-3"></i>
+                                    <span><strong>预约机制：</strong>团餐、分享会需提前1天预约，研学套装可线上预订</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h5 class="font-bold text-lg text-primary mb-4">（2）人员配置</h5>
+                            <div class="overflow-x-auto">
+                                <table class="w-full border-collapse">
+                                    <thead>
+                                        <tr class="bg-light">
+                                            <th class="border border-gray-300 p-3 text-left">岗位</th>
+                                            <th class="border border-gray-300 p-3 text-left">人数</th>
+                                            <th class="border border-gray-300 p-3 text-left">职责</th>
+                                            <th class="border border-gray-300 p-3 text-left">要求</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="border border-gray-300 p-3 font-bold">运营店长</td>
+                                            <td class="border border-gray-300 p-3">1名（全职）</td>
+                                            <td class="border border-gray-300 p-3">统筹业态运营、联动对接、社区关系维护</td>
+                                            <td class="border border-gray-300 p-3">熟悉天津本地生活，具备社区商业运营经验</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border border-gray-300 p-3 font-bold">店员（轮值）</td>
+                                            <td class="border border-gray-300 p-3">2名</td>
+                                            <td class="border border-gray-300 p-3">负责便民服务、餐饮服务、零售售卖</td>
+                                            <td class="border border-gray-300 p-3">服务意识强，了解北区所有核心节点，能提供路线引导</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border border-gray-300 p-3 font-bold">社区志愿者（兼职）</td>
+                                            <td class="border border-gray-300 p-3">1名（每周2天）</td>
+                                            <td class="border border-gray-300 p-3">协助邻里交流活动、寄卖区管理</td>
+                                            <td class="border border-gray-300 p-3">本地居民优先，熟悉天津租界文化与邻里情况</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div class="md:col-span-2">
+                            <h5 class="font-bold text-lg text-primary mb-4">（3）合规与改造红线</h5>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fa fa-unlock-alt text-secondary mt-1 mr-3"></i>
+                                    <span><strong>建筑改造：</strong>所有设施（货架、桌椅、展柜）均为可移动/模块化设计，不打孔、不刷漆、不改动建筑本体（墙体、门窗、地面）；电路改造采用低压安全线路，经文物保护部门审批后施工</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-book text-secondary mt-1 mr-3"></i>
+                                    <span><strong>业态合规：</strong>禁止重油烟、高噪音业态（如烧烤、大型加工），餐饮采用电加热设备；文创/寄卖产品不涉及敏感内容，贴合本地生活与研学主题</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-volume-down text-secondary mt-1 mr-3"></i>
+                                    <span><strong>社区友好：</strong>噪音控制在55分贝以下，外摆区域不占用公共通道，垃圾日产日清，不影响周边居民生活</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 运营管理 -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-serif text-primary font-bold mb-6">运营管理</h3>
+                <div class="bg-light p-6 rounded-lg shadow-md">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white p-4 rounded-md hover-lift">
+                            <h4 class="font-bold mb-2 flex items-center">
+                                <i class="fa fa-users text-primary mr-2"></i> 人员配置
+                            </h4>
+                            <ul class="list-disc list-inside space-y-2">
+                                <li>运营经理：1名</li>
+                                <li>服务人员：2-3名</li>
+                                <li>保洁人员：1名</li>
+                                <li>兼职人员：若干</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-4 rounded-md hover-lift">
+                            <h4 class="font-bold mb-2 flex items-center">
+                                <i class="fa fa-clock-o text-primary mr-2"></i> 运营时间
+                            </h4>
+                            <ul class="list-disc list-inside space-y-2">
+                                <li>周一至周五：09:00-21:00</li>
+                                <li>周六至周日：08:00-22:00</li>
+                                <li>节假日：08:00-22:00</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-4 rounded-md hover-lift">
+                            <h4 class="font-bold mb-2 flex items-center">
+                                <i class="fa fa-tasks text-primary mr-2"></i> 服务内容
+                            </h4>
+                            <ul class="list-disc list-inside space-y-2">
+                                <li>社区信息咨询</li>
+                                <li>临时办公空间</li>
+                                <li>会议室预订</li>
+                                <li>休闲阅读区</li>
+                                <li>简单餐饮服务</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-4 rounded-md hover-lift">
+                            <h4 class="font-bold mb-2 flex items-center">
+                                <i class="fa fa-line-chart text-primary mr-2"></i> 运营目标
+                            </h4>
+                            <ul class="list-disc list-inside space-y-2">
+                                <li>月服务人数：1000+</li>
+                                <li>会员数量：200+</li>
+                                <li>活动场次：每月4-6场</li>
+                                <li>年度营收：50万元+</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 价格和折扣信息 -->
+    <section class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-serif text-primary font-bold mb-8 text-center">价格与折扣信息</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover-lift">
+                    <div class="bg-primary text-white p-6">
+                        <h3 class="text-xl font-bold mb-2">基础套餐</h3>
+                        <p class="text-3xl font-bold">¥0</p>
+                        <p class="text-sm opacity-80">适合临时使用</p>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center">
+                                <i class="fa fa-check text-green-500 mr-2"></i>
+                                <span>免费使用休息区</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fa fa-check text-green-500 mr-2"></i>
+                                <span>免费咨询服务</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fa fa-check text-green-500 mr-2"></i>
+                                <span>免费WiFi</span>
+                            </li>
+                            <li class="flex items-center text-gray-400">
+                                <i class="fa fa-times mr-2"></i>
+                                <span>会议室使用</span>
+                            </li>
+                            <li class="flex items-center text-gray-400">
+                                <i class="fa fa-times mr-2"></i>
+                                <span>办公空间使用</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="block text-center bg-gray-200 hover:bg-gray-300 text-primary font-bold py-3 px-4 rounded-lg transition-custom">
+                            立即使用
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover-lift border-2 border-primary">
+                    <div class="bg-primary text-white p-6">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-xl font-bold">会员套餐</h3>
+                            <span class="bg-white text-primary text-xs font-bold px-2 py-1 rounded">推荐</span>
+                        </div>
+                        <p class="text-3xl font-bold">¥299<span class="text-sm font-normal">/月</span></p>
+                        <p class="text-sm opacity-80">适合频繁使用</p>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center">
+                                <i class="fa fa-check text-green-500 mr-2"></i>
+                                <span>无限使用休息区</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fa fa-check text-green-500 mr-2"></i>
+                                <span>优先咨询服务</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fa fa-check text-green-500 mr-2"></i>
+                                <span>免费WiFi</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fa fa-check text-green-500 mr-2"></i>
+                                <span>每月10小时会议室</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fa fa-check text-green-500 mr-2"></i>
+                                <span>每月20小时办公空间</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="block text-center bg-primary hover:bg-accent text-white font-bold py-3 px-4 rounded-lg transition-custom">
+                            立即开通
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover-lift">
+                    <div class="bg-secondary text-primary p-6">
+                        <h3 class="text-xl font-bold mb-2">企业套餐</h3>
+                        <p class="text-3xl font-bold">¥2999<span class="text-sm font-normal">/月</span></p>
+                        <p class="text-sm opacity-80">适合企业使用</p>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center">
+                                <i class="fa fa-check text-green-500 mr-2"></i>
+                                <span>无限使用所有空间</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fa fa-check text-green-500 mr-2"></i>
+                                <span>专属服务人员</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fa fa-check text-green-500 mr-2"></i>
+                                <span>免费WiFi</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fa fa-check text-green-500 mr-2"></i>
+                                <span>无限使用会议室</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fa fa-check text-green-500 mr-2"></i>
+                                <span>专属办公区域</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="block text-center bg-secondary hover:bg-primary text-white font-bold py-3 px-4 rounded-lg transition-custom">
+                            联系我们
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 折扣信息 -->
+            <div class="mt-12 bg-white p-8 rounded-lg shadow-md">
+                <h3 class="text-2xl font-serif text-primary font-bold mb-6 text-center">限时折扣</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="flex items-center p-4 border-l-4 border-accent bg-light rounded-md">
+                        <div class="bg-accent text-white p-3 rounded-full mr-4">
+                            <i class="fa fa-ticket text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-1">新用户优惠</h4>
+                            <p>首次注册会员享8折优惠</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center p-4 border-l-4 border-secondary bg-light rounded-md">
+                        <div class="bg-secondary text-primary p-3 rounded-full mr-4">
+                            <i class="fa fa-calendar-check-o text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-1">长期会员</h4>
+                            <p>年付会员享7折优惠</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center p-4 border-l-4 border-primary bg-light rounded-md">
+                        <div class="bg-primary text-white p-3 rounded-full mr-4">
+                            <i class="fa fa-users text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-1">团体优惠</h4>
+                            <p>5人以上团体享8.5折优惠</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center p-4 border-l-4 border-green-500 bg-light rounded-md">
+                        <div class="bg-green-500 text-white p-3 rounded-full mr-4">
+                            <i class="fa fa-gift text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold mb-1">推荐奖励</h4>
+                            <p>推荐好友注册会员送1个月会员</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部 -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-serif font-bold mb-4 text-secondary">慢享北里</h3>
+                    <p class="mb-4">文化生活枢纽 · 邻里共享空间</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-secondary transition-custom">
+                            <i class="fa fa-weixin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-secondary transition-custom">
+                            <i class="fa fa-weibo text-xl"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-secondary transition-custom">
+                            <i class="fa fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-secondary">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-secondary transition-custom">首页</a></li>
+                        <li><a href="index.html#routes" class="hover:text-secondary transition-custom">慢游路线</a></li>
+                        <li><a href="index.html#about" class="hover:text-secondary transition-custom">关于我们</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-secondary">地块链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="district-1.html" class="hover:text-secondary transition-custom">1号地块</a></li>
+                        <li><a href="district-2.html" class="hover:text-secondary transition-custom">2号地块</a></li>
+                        <li><a href="district-3.html" class="hover:text-secondary transition-custom">3号地块</a></li>
+                        <li><a href="district-4.html" class="hover:text-secondary transition-custom">4号地块</a></li>
+                        <li><a href="district-5.html" class="hover:text-secondary transition-custom">5号地块</a></li>
+                        <li><a href="district-6.html" class="hover:text-secondary transition-custom">6号地块</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-secondary">联系我们</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fa fa-map-marker mr-2"></i>
+                            <span>北京市东城区北里胡同</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-phone mr-2"></i>
+                            <span>010-12345678</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-envelope mr-2"></i>
+                            <span>info@manxiangbeili.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>&copy; 2024 慢享北里·文化生活枢纽. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // 移动端菜单
+        const menuButton = document.querySelector('button');
+        const navLinks = document.querySelector('.md\:hidden + div');
+        
+        if (menuButton && navLinks) {
+            menuButton.addEventListener('click', () => {
+                navLinks.classList.toggle('hidden');
+                navLinks.classList.toggle('flex');
+                navLinks.classList.toggle('flex-col');
+                navLinks.classList.toggle('space-y-4');
+                navLinks.classList.toggle('mt-4');
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>配套境 - 3号地块 | 慢享北里</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8B4513',
+                        secondary: '#D2B48C',
+                        accent: '#A0522D',
+                        light: '#F5F5DC',
+                        dark: '#3E2723'
+                    },
+                    fontFamily: {
+                        serif: ['Noto Serif SC', 'serif'],
+                        sans: ['Noto Sans SC', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+            .bg-opacity-80 {
+                background-opacity: 0.8;
+            }
+            .transition-all-300 {
+                transition: all 0.3s ease;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans bg-light text-dark">
+    <!-- 导航栏 -->
+    <nav class="bg-primary text-white fixed w-full z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa fa-map-marker text-2xl"></i>
+                <span class="text-xl font-bold">慢享北里</span>
+                <span class="text-sm opacity-80">文化生活枢纽</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-secondary transition-all-300">首页</a>
+                <a href="index.html#about" class="hover:text-secondary transition-all-300">关于北里</a>
+                <a href="index.html#districts" class="hover:text-secondary transition-all-300">六境分区</a>
+                <a href="index.html#route" class="hover:text-secondary transition-all-300">慢行动线</a>
+                <a href="index.html#value" class="hover:text-secondary transition-all-300">核心价值</a>
+                <a href="index.html#contact" class="hover:text-secondary transition-all-300">联系我们</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                    <i class="fa fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- 移动端菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-primary py-2 px-4">
+            <a href="index.html" class="block py-2 hover:text-secondary transition-all-300">首页</a>
+            <a href="index.html#about" class="block py-2 hover:text-secondary transition-all-300">关于北里</a>
+            <a href="index.html#districts" class="block py-2 hover:text-secondary transition-all-300">六境分区</a>
+            <a href="index.html#route" class="block py-2 hover:text-secondary transition-all-300">慢行动线</a>
+            <a href="index.html#value" class="block py-2 hover:text-secondary transition-all-300">核心价值</a>
+            <a href="index.html#contact" class="block py-2 hover:text-secondary transition-all-300">联系我们</a>
+        </div>
+    </nav>
+
+    <!-- 英雄区 -->
+    <section class="relative h-64 md:h-80 flex items-center justify-center overflow-hidden bg-accent">
+        <div class="container mx-auto px-4 z-10 text-center">
+            <h1 class="text-3xl md:text-5xl font-bold text-white mb-2 text-shadow">3号地块「配套境」</h1>
+            <p class="text-xl text-white text-shadow">慢享北里·2号地块专属配套核心·研学刚需配套服务中心</p>
+        </div>
+    </section>
+
+    <!-- 面包屑导航 -->
+    <section class="bg-white py-4 border-b border-gray-200">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center text-sm">
+                <a href="index.html" class="text-gray-600 hover:text-primary">首页</a>
+                <i class="fa fa-angle-right text-gray-400 mx-2"></i>
+                <a href="index.html#districts" class="text-gray-600 hover:text-primary">六境分区</a>
+                <i class="fa fa-angle-right text-gray-400 mx-2"></i>
+                <span class="text-primary font-bold">3号地块「配套境」</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心信息 -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="md:col-span-2">
+                    <h2 class="text-2xl font-bold text-primary mb-6">核心定位</h2>
+                    <p class="text-gray-600 mb-8">作为 2 号地块（研学境）专属配套核心，聚焦 "研学刚需配套 + 轻社交延伸"，承接 2 号研学团队研讨、工具使用、课后休憩需求，衔接 4 号（文艺境）、6 号（生活境）形成全域联动，打造 "刚需适配、轻运营、高衔接" 的配套服务空间，保障研学体验连贯、主客共享便捷。</p>
+                </div>
+                
+                <div class="md:col-span-1">
+                    <div class="bg-light rounded-lg shadow-md p-6 mb-6">
+                        <h3 class="text-lg font-bold text-primary mb-4">核心信息</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fa fa-map-marker text-secondary mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">地块编号：</span>
+                                    <span>3号地块</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-tag text-secondary mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">核心定位：</span>
+                                    <span>2号地块专属配套核心</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-shopping-bag text-secondary mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">核心业态：</span>
+                                    <span>研学研讨室+工具驿站+文化茶座</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-users text-secondary mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">核心客群：</span>
+                                    <span>研学团队、本地居民、游客</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-star text-secondary mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">核心特质：</span>
+                                    <span>刚需适配·轻运营·高衔接</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 业态模块 -->
+    <section class="py-12 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-primary mb-8 text-center">核心业态落地细则</h2>
+            
+            <!-- 模块1：研学研讨室 -->
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-10">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mr-4">
+                        <i class="fa fa-users text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary">模块1：研学研讨室（核心业态）</h3>
+                </div>
+                
+                <!-- 研学研讨室卡片 -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-white rounded-lg shadow-md border-l-4 border-primary p-5 transition-all-300 hover:shadow-lg">
+                        <h4 class="font-bold text-lg text-primary mb-3">空间布局</h4>
+                        <ul class="text-gray-600 mb-3 space-y-2">
+                            <li>• 1间主研讨室（30-40㎡，40人容量）</li>
+                            <li>• 2间小型研讨室（15-20㎡，8-10人/间）</li>
+                            <li>• 配可移动桌椅、多媒体设备、隔音墙面</li>
+                            <li>• 预留成果展示区，做防滑、防撞、无障碍适配</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md border-l-4 border-secondary p-5 transition-all-300 hover:shadow-lg">
+                        <h4 class="font-bold text-lg text-primary mb-3">运营核心</h4>
+                        <ul class="text-gray-600 mb-3 space-y-2">
+                            <li>• 研学团队提前1天预约</li>
+                            <li>• 优先保障工作日9:00-16:00研学使用</li>
+                            <li>• 非高峰时段对本地居民开放</li>
+                            <li>• 配备1名管理员，负责设备调试、巡查与场地复位</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md border-l-4 border-accent p-5 transition-all-300 hover:shadow-lg">
+                        <h4 class="font-bold text-lg text-primary mb-3">收费适配</h4>
+                        <ul class="text-gray-600 mb-3 space-y-2">
+                            <li>• 主研讨室：200元/小时</li>
+                            <li>• 小型研讨室：80元/小时</li>
+                            <li>• 2号合作研学机构享8折</li>
+                            <li>• 本地居民：10元/人/次（限小型研讨室非高峰）</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 模块2：工具驿站 -->
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-10">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-white mr-4">
+                        <i class="fa fa-wrench text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary">模块2：工具驿站（刚需配套）</h3>
+                </div>
+                
+                <!-- 工具驿站卡片 -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-white rounded-lg shadow-md border-l-4 border-secondary p-5 transition-all-300 hover:shadow-lg">
+                        <h4 class="font-bold text-lg text-primary mb-3">空间布局</h4>
+                        <ul class="text-gray-600 mb-3 space-y-2">
+                            <li>• 15-20㎡专属空间</li>
+                            <li>• 分储物、取用、维修区</li>
+                            <li>• 配多层货架、维修台、监控、消防设施</li>
+                            <li>• 按 "研学工具、维修耗材、应急物资" 分类存放</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md border-l-4 border-accent p-5 transition-all-300 hover:shadow-lg">
+                        <h4 class="font-bold text-lg text-primary mb-3">运营核心</h4>
+                        <ul class="text-gray-600 mb-3 space-y-2">
+                            <li>• 实行 "入库-领用-归还-维护" 闭环</li>
+                            <li>• 每日盘点账物一致</li>
+                            <li>• 尖锐工具单独存放、专人监管</li>
+                            <li>• 未成年人禁止单独领用</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md border-l-4 border-primary p-5 transition-all-300 hover:shadow-lg">
+                        <h4 class="font-bold text-lg text-primary mb-3">收费适配</h4>
+                        <ul class="text-gray-600 mb-3 space-y-2">
+                            <li>• 常用工具（卷尺、记号笔）：研学团队免费领用</li>
+                            <li>• 尖锐/专用工具：5元/件/次</li>
+                            <li>• 合作团队可办月卡（200元/月）</li>
+                            <li>• 零散客群：2-10元/件/次（需缴押金）</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 模块3：文化茶座 -->
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-white mr-4">
+                        <i class="fa fa-coffee text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary">模块3：文化茶座（延伸业态）</h3>
+                </div>
+                
+                <!-- 文化茶座卡片 -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-white rounded-lg shadow-md border-l-4 border-accent p-5 transition-all-300 hover:shadow-lg">
+                        <h4 class="font-bold text-lg text-primary mb-3">空间布局</h4>
+                        <ul class="text-gray-600 mb-3 space-y-2">
+                            <li>• 20-25㎡空间</li>
+                            <li>• 分安静品茗区（适配研学休憩）</li>
+                            <li>• 轻社交区</li>
+                            <li>• 配茶桌、茶具、冷藏柜、消毒设备</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md border-l-4 border-primary p-5 transition-all-300 hover:shadow-lg">
+                        <h4 class="font-bold text-lg text-primary mb-3">运营核心</h4>
+                        <ul class="text-gray-600 mb-3 space-y-2">
+                            <li>• 研学团队设快速点单通道</li>
+                            <li>• 每日做好场地、茶具清洁消毒</li>
+                            <li>• 茶具热力消毒≥85℃、≥10分钟</li>
+                            <li>• 搭建社群运营，提升客群留存</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md border-l-4 border-secondary p-5 transition-all-300 hover:shadow-lg">
+                        <h4 class="font-bold text-lg text-primary mb-3">收费适配</h4>
+                        <ul class="text-gray-600 mb-3 space-y-2">
+                            <li>• 茶品：15-35元/杯</li>
+                            <li>• 茶点：8-20元/份</li>
+                            <li>• 研学团队享团体套餐优惠（满10人9折）</li>
+                            <li>• 提供传统+年轻化茶品+轻茶点（标注过敏源）</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 落地注意事项 -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-primary mb-8 text-center">落地注意事项</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-light rounded-lg shadow-md p-6 transition-all-300 hover:shadow-lg">
+                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mx-auto mb-4">
+                        <i class="fa fa-building text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4 text-center">建筑适配</h3>
+                    <p class="text-gray-600 text-center">遵循历史建筑保护要求，不破坏结构，做好隔音、防滑改造，确保空间安全舒适。</p>
+                </div>
+                
+                <div class="bg-light rounded-lg shadow-md p-6 transition-all-300 hover:shadow-lg">
+                    <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-white mx-auto mb-4">
+                        <i class="fa fa-road text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4 text-center">动线衔接</h3>
+                    <p class="text-gray-600 text-center">与2号地块无缝对接（步行≤2分钟），通过2-4号过渡广场联动4号地块，形成流畅的空间动线。</p>
+                </div>
+                
+                <div class="bg-light rounded-lg shadow-md p-6 transition-all-300 hover:shadow-lg">
+                    <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-white mx-auto mb-4">
+                        <i class="fa fa-check-circle text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-4 text-center">合规保障</h3>
+                    <p class="text-gray-600 text-center">符合研学基地设施规范，消防、应急、卫生达标，工具驿站、茶座完成经营备案。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 相关地块 -->
+    <section class="py-12 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-primary mb-8 text-center">相关地块</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- 2号地块 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all-300 hover:shadow-xl">
+                    <div class="relative h-40 bg-secondary flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fa fa-graduation-cap text-4xl text-white mb-2"></i>
+                            <h3 class="font-bold text-lg text-white">2号地块</h3>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg text-primary mb-2">「研学境」</h3>
+                        <p class="text-gray-600 mb-4">慢享北里·梁林建筑研学核心区·近代文化体验高地</p>
+                        <a href="district-2.html" class="text-primary hover:text-accent font-bold flex items-center">
+                            查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 4号地块 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all-300 hover:shadow-xl">
+                    <div class="relative h-40 bg-light flex items-center justify-center border-2 border-primary">
+                        <div class="text-center">
+                            <i class="fa fa-paint-brush text-4xl text-primary mb-2"></i>
+                            <h3 class="font-bold text-lg text-primary">4号地块</h3>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg text-primary mb-2">「文艺境」</h3>
+                        <p class="text-gray-600 mb-4">慢享北里·意式文艺体验核心·南北区中途承接枢纽</p>
+                        <a href="district-4.html" class="text-primary hover:text-accent font-bold flex items-center">
+                            查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 6号地块 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all-300 hover:shadow-xl">
+                    <div class="relative h-40 bg-primary flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fa fa-home text-4xl text-white mb-2"></i>
+                            <h3 class="font-bold text-lg text-white">6号地块</h3>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg text-primary mb-2">「生活境」</h3>
+                        <p class="text-gray-600 mb-4">慢享北里·主客共享生活服务枢纽·社区商业中心</p>
+                        <a href="district-6.html" class="text-primary hover:text-accent font-bold flex items-center">
+                            查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary hover:bg-accent text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all-300 opacity-0 invisible">
+        <i class="fa fa-angle-up text-2xl"></i>
+    </button>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <i class="fa fa-map-marker text-secondary text-xl"></i>
+                        <span class="text-xl font-bold">慢享北里</span>
+                        <span class="text-sm opacity-70">文化生活枢纽</span>
+                    </div>
+                    <p class="mt-2 text-sm opacity-70">© 2026 慢享北里文化生活枢纽. 保留所有权利.</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-white hover:text-secondary transition-all-300">
+                        <i class="fa fa-weixin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-secondary transition-all-300">
+                        <i class="fa fa-weibo text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-secondary transition-all-300">
+                        <i class="fa fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 返回顶部按钮
+        const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>意式文艺核心 - 4号地块 | 慢享北里</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8B4513',
+                        secondary: '#D2B48C',
+                        accent: '#A0522D',
+                        light: '#F5F5DC',
+                        dark: '#3E2723'
+                    },
+                    fontFamily: {
+                        serif: ['Noto Serif SC', 'serif'],
+                        sans: ['Noto Sans SC', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+            .bg-opacity-80 {
+                background-opacity: 0.8;
+            }
+            .transition-all-300 {
+                transition: all 0.3s ease;
+            }
+            .card-hover {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
+            .table-row-hover:hover {
+                background-color: rgba(245, 245, 220, 0.5);
+            }
+            .section-spacing {
+                margin-bottom: 2rem;
+            }
+            .content-spacing {
+                line-height: 1.7;
+                margin-bottom: 1rem;
+            }
+            .text-body {
+                font-size: 16px;
+                line-height: 1.8;
+            }
+            .text-subtitle {
+                font-size: 18px;
+                line-height: 1.6;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans bg-light text-dark">
+    <!-- 导航栏 -->
+    <nav class="bg-primary text-white fixed w-full z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa fa-map-marker text-2xl"></i>
+                <span class="text-xl font-bold">慢享北里</span>
+                <span class="text-sm opacity-80">文化生活枢纽</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-secondary transition-all-300">首页</a>
+                <a href="index.html#about" class="hover:text-secondary transition-all-300">关于北里</a>
+                <a href="index.html#districts" class="hover:text-secondary transition-all-300">六境分区</a>
+                <a href="index.html#route" class="hover:text-secondary transition-all-300">慢行动线</a>
+                <a href="index.html#value" class="hover:text-secondary transition-all-300">核心价值</a>
+                <a href="index.html#contact" class="hover:text-secondary transition-all-300">联系我们</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                    <i class="fa fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- 移动端菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-primary py-2 px-4">
+            <a href="index.html" class="block py-2 hover:text-secondary transition-all-300">首页</a>
+            <a href="index.html#about" class="block py-2 hover:text-secondary transition-all-300">关于北里</a>
+            <a href="index.html#districts" class="block py-2 hover:text-secondary transition-all-300">六境分区</a>
+            <a href="index.html#route" class="block py-2 hover:text-secondary transition-all-300">慢行动线</a>
+            <a href="index.html#value" class="block py-2 hover:text-secondary transition-all-300">核心价值</a>
+            <a href="index.html#contact" class="block py-2 hover:text-secondary transition-all-300">联系我们</a>
+        </div>
+    </nav>
+
+    <!-- 英雄区 -->
+    <section class="relative h-64 md:h-80 flex items-center justify-center overflow-hidden bg-light border-2 border-primary">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Italian%20barracks%20building%20exterior%20with%20arch%20design%2C%20historical%20architecture%2C%20Tianjin%20concession%20style%2C%20warm%20lighting%2C%20cultural%20heritage&image_size=landscape_16_9'); opacity: 0.3;"></div>
+        <div class="container mx-auto px-4 z-10 text-center">
+            <h1 class="text-3xl md:text-5xl font-bold text-primary mb-2">4号地块「NEX意巷·原意大利兵营」</h1>
+            <p class="text-xl text-primary mb-8">意式文艺核心·南北区人流承接枢纽·研学消费转化站</p>
+        </div>
+    </section>
+
+    <!-- 面包屑导航 -->
+    <section class="bg-white py-4 border-b border-gray-200">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center text-sm">
+                <a href="index.html" class="text-gray-600 hover:text-primary">首页</a>
+                <i class="fa fa-angle-right text-gray-400 mx-2"></i>
+                <a href="index.html#districts" class="text-gray-600 hover:text-primary">六境分区</a>
+                <i class="fa fa-angle-right text-gray-400 mx-2"></i>
+                <span class="text-primary font-bold">4号地块「NEX意巷·原意大利兵营」</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心信息 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="md:col-span-2">
+                    <h2 class="text-2xl font-bold text-primary mb-8">核心定位</h2>
+                    <p class="text-gray-600 mb-10 text-body">明确1号为"南北区起点级导览过渡"（负责基础信息传递、人流初引导），4号地块升级为<strong>"意式文艺体验核心+中途承接枢纽+研学消费转化站"</strong>，核心是"承接1号导流的人流、通过体验留住人、再引导至2号/5号"，与1号形成"导览-体验-深化"的动线闭环，既不重复导览功能，又强化北区"文艺+消费"的补充价值，全程遵循"活化历史建筑+延续运营基因"原则。</p>
+                </div>
+                
+                <div class="md:col-span-1">
+                    <div class="bg-light rounded-lg shadow-lg p-6 md:p-8">
+                        <h3 class="text-lg font-bold text-primary mb-6">核心信息</h3>
+                        <ul class="space-y-3 md:space-y-4">
+                            <li class="flex items-start bg-white p-3 md:p-4 rounded-lg shadow-sm">
+                                <div class="w-8 h-8 md:w-10 md:h-10 bg-primary rounded-full flex items-center justify-center text-white mr-3 md:mr-4 flex-shrink-0">
+                                    <i class="fa fa-map-marker text-sm md:text-base"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold text-primary">地块编号：</span>
+                                    <span>4号地块</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start bg-white p-3 md:p-4 rounded-lg shadow-sm">
+                                <div class="w-8 h-8 md:w-10 md:h-10 bg-secondary rounded-full flex items-center justify-center text-white mr-3 md:mr-4 flex-shrink-0">
+                                    <i class="fa fa-tag text-sm md:text-base"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold text-secondary">核心定位：</span>
+                                    <span class="text-sm md:text-base">意式文艺体验核心·中途承接枢纽·研学消费转化站</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start bg-white p-3 md:p-4 rounded-lg shadow-sm">
+                                <div class="w-8 h-8 md:w-10 md:h-10 bg-accent rounded-full flex items-center justify-center text-white mr-3 md:mr-4 flex-shrink-0">
+                                    <i class="fa fa-shopping-bag text-sm md:text-base"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold text-accent">核心业态：</span>
+                                    <span class="text-sm md:text-base">意式手工艺术工坊·租界生活沉浸场景·夜间文艺微剧场·意式轻食·文创零售·研学补给</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start bg-white p-3 md:p-4 rounded-lg shadow-sm">
+                                <div class="w-8 h-8 md:w-10 md:h-10 bg-blue-500 rounded-full flex items-center justify-center text-white mr-3 md:mr-4 flex-shrink-0">
+                                    <i class="fa fa-users text-sm md:text-base"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold text-blue-500">核心客群：</span>
+                                    <span class="text-sm md:text-base">文艺爱好者·研学人群·游客·本地居民</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start bg-white p-3 md:p-4 rounded-lg shadow-sm">
+                                <div class="w-8 h-8 md:w-10 md:h-10 bg-yellow-500 rounded-full flex items-center justify-center text-white mr-3 md:mr-4 flex-shrink-0">
+                                    <i class="fa fa-star text-sm md:text-base"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold text-yellow-500">核心特质：</span>
+                                    <span class="text-sm md:text-base">意式文艺·深度体验·场景沉浸·消费转化·动线承接</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 业态模块 -->
+    <section class="py-12 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-primary mb-8 text-center">业态模块及落地内容（突出与1号的差异化）</h2>
+            
+            <!-- 模块1：意式文艺核心体验 -->
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-10 card-hover">
+                <div class="flex flex-col md:flex-row md:items-center mb-8">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mb-4 md:mb-0 md:mr-6">
+                        <i class="fa fa-paint-brush text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl md:text-2xl font-bold text-primary mb-3">模块1：意式文艺核心体验（占比50%）</h3>
+                        <p class="text-lg text-gray-700">核心留住人的关键，区别于1号的轻体验</p>
+                    </div>
+                </div>
+                <div class="bg-light p-6 rounded-lg mb-8">
+                    <p class="text-gray-700 content-spacing">核心逻辑：1号做"信息告知+快闪轻体验"，4号地块做"深度参与+场景沉浸"，让人流从"路过"变"停留"</p>
+                </div>
+                
+                <div class="space-y-8">
+                    <!-- 意式手工艺术工坊 -->
+                    <div class="bg-light rounded-lg p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white mr-4">
+                                <i class="fa fa-craft-flask text-lg"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-primary">意式手工艺术工坊（核心）</h4>
+                        </div>
+                        <div class="mb-6">
+                            <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Interior%20of%20Italian%20handicraft%20workshop%20with%20pottery%20wheel%2C%20leather%20craft%20tools%2C%20art%20supplies%2C%20warm%20lighting%2C%20arch%20structure%20ceiling&image_size=landscape_16_9" alt="意式手工艺术工坊" class="w-full h-48 md:h-64 object-cover rounded-lg shadow-md">
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div>
+                                <h5 class="font-semibold text-gray-800 mb-2">具体落地</h5>
+                                <ul class="list-disc list-inside space-y-2 text-gray-600">
+                                    <li>保留并升级现有手作资源：陶艺制作（意式器皿纹样）、皮具手作（意大利传统工艺）、油画体验（租界风景主题），新增"意式玻璃彩绘""租界建筑模型DIY"</li>
+                                    <li>工坊配备专业意式工艺导师，提供"从原料到成品"的完整体验</li>
+                                    <li>联动2号梁林集群，开设"意式建筑+中式古建"对比手作课</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-gray-800 mb-2">运营方式</h5>
+                                <p class="text-gray-600">预约制，每场限8人，收费88-128元/人，体验时长60-90分钟，完成的作品可带走或在店内展示</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-gray-800 mb-2">适配亮点</h5>
+                                <p class="text-gray-600">利用原意大利兵营规整空间，保留高挑空、拱券结构，适配手工创作的操作需求</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 租界生活沉浸场景 -->
+                    <div class="bg-light rounded-lg p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white mr-4">
+                                <i class="fa fa-film text-lg"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-primary">租界生活沉浸场景</h4>
+                        </div>
+                        <div class="mb-6">
+                            <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=1930s%20Italian%20concession%20living%20room%20with%20vintage%20furniture%2C%20gramophone%2C%20old%20photos%2C%20Italian%20style%20decorations%2C%20warm%20lighting%2C%20nostalgic%20atmosphere&image_size=landscape_16_9" alt="租界生活沉浸场景" class="w-full h-48 md:h-64 object-cover rounded-lg shadow-md">
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div>
+                                <h5 class="font-semibold text-gray-800 mb-2">具体落地</h5>
+                                <ul class="list-disc list-inside space-y-2 text-gray-600">
+                                    <li>复原1930年代意租界"文艺小聚落"场景，搭配老家具、留声机、租界老照片、意式服饰</li>
+                                    <li>提供"沉浸式换装体验"（意式复古装、天津租界旗袍，30元/小时）</li>
+                                    <li>场景内设置"文艺打卡任务"，完成可兑换2号/5号研学优惠券</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-gray-800 mb-2">运营方式</h5>
+                                <p class="text-gray-600">免费开放场景，换装租赁收费，任务打卡每日限量50份优惠券，增强参与感和导流动力</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-gray-800 mb-2">适配亮点</h5>
+                                <p class="text-gray-600">依托兵营建筑肌理，场景化体验比1号的快闪更深入，不改动建筑本体（道具均为可移动）</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 夜间文艺微剧场 -->
+                    <div class="bg-light rounded-lg p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center text-white mr-4">
+                                <i class="fa fa-theater-masks text-lg"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-primary">夜间文艺微剧场</h4>
+                        </div>
+                        <div class="mb-6">
+                            <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Small%20outdoor%20theater%20in%20courtyard%20with%20warm%20lighting%2C%20intimate%20setting%2C%20musicians%20performing%2C%20Italian%20style%20architecture%20surroundings%2C%20night%20scene&image_size=landscape_16_9" alt="夜间文艺微剧场" class="w-full h-48 md:h-64 object-cover rounded-lg shadow-md">
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div>
+                                <h5 class="font-semibold text-gray-800 mb-2">具体落地</h5>
+                                <ul class="list-disc list-inside space-y-2 text-gray-600">
+                                    <li>利用兵营庭院打造"小众静谧剧场"：每周五/六晚举办小型民谣演出、意式歌剧片段、租界故事分享会</li>
+                                    <li>推出"夜间沉浸套餐"（微剧场+手作体验+意式饮品，158元/人）</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-gray-800 mb-2">运营方式</h5>
+                                <p class="text-gray-600">微剧场门票30-50元/人，套餐线上线下同步售卖，夜间运营至21:30（避开居民休息时段）</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-gray-800 mb-2">适配亮点</h5>
+                                <p class="text-gray-600">庭院围合感强，灯光采用暖光低亮度设计，营造与1号日间热闹氛围不同的静谧文艺感</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 模块2：轻消费配套服务 -->
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-10 card-hover">
+                <div class="flex flex-col md:flex-row md:items-center mb-8">
+                    <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center text-white mb-4 md:mb-0 md:mr-6">
+                        <i class="fa fa-coffee text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl md:text-2xl font-bold text-primary mb-3">模块2：轻消费配套服务（占比35%）</h3>
+                        <p class="text-lg text-gray-700">承接停留需求，实现消费转化</p>
+                    </div>
+                </div>
+                <div class="bg-light p-6 rounded-lg mb-8">
+                    <p class="text-gray-700 content-spacing">核心原则：1号做"便民基础服务"，4号地块做"特色消费+研学补给"，适配人流停留后的需求</p>
+                </div>
+                
+                <div class="space-y-8">
+                    <!-- 意式轻食+本地融合餐饮 -->
+                    <div class="bg-light rounded-lg p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white mr-4">
+                                <i class="fa fa-cutlery text-lg"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-primary">意式轻食+本地融合餐饮</h4>
+                        </div>
+                        <div class="mb-6">
+                            <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Italian%20cafe%20interior%20with%20arch%20design%2C%20warm%20lighting%2C%20cozy%20seating%2C%20Italian%20food%20display%2C%20Tianjin%20fusion%20elements&image_size=landscape_16_9" alt="意式轻食+本地融合餐饮" class="w-full h-48 md:h-64 object-cover rounded-lg shadow-md">
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div>
+                                <h5 class="font-semibold text-gray-800 mb-2">具体落地</h5>
+                                <ul class="list-disc list-inside space-y-2 text-gray-600">
+                                    <li>保留意大利飞碧纳中国首店、创意融合餐厅，新增"意式街头小吃档"（如意式炸饺、手工披萨切片、浓缩咖啡）</li>
+                                    <li>创新"天津-意大利融合轻食"（如天津麻花意式甜品、意式肉酱煎饼果子），避免与南区同质化</li>
+                                    <li>庭院设置"户外外摆区"（6组双人桌+2组四人桌），搭配意式花箱、遮阳伞</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-gray-800 mb-2">运营方式</h5>
+                                <p class="text-gray-600">营业时间9:00-21:00，人均消费40-80元，研学人群凭2号/5号研学凭证享9折，1号导流的散客凭导览手册享9.5折</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-gray-800 mb-2">改造要求</h5>
+                                <p class="text-gray-600">室内保留原有意式装修风格，外摆设施均为可移动设计，不破坏地面/绿植</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 文艺主题文创零售 -->
+                    <div class="bg-light rounded-lg p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white mr-4">
+                                <i class="fa fa-shopping-bag text-lg"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-primary">文艺主题文创零售</h4>
+                        </div>
+                        <div class="mb-6">
+                            <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Arts%20and%20crafts%20retail%20shop%20with%20Italian%20style%20decorations%2C%20display%20cases%20with%20handmade%20products%2C%20Tianjin%20cultural%20souvenirs%2C%20warm%20lighting%2C%20cozy%20atmosphere&image_size=landscape_16_9" alt="文艺主题文创零售" class="w-full h-48 md:h-64 object-cover rounded-lg shadow-md">
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div>
+                                <h5 class="font-semibold text-gray-800 mb-2">具体落地</h5>
+                                <ul class="list-disc list-inside space-y-2 text-gray-600">
+                                    <li>意式特色系列：意大利进口手工文具、意式纹样饰品、租界主题冰箱贴/帆布包</li>
+                                    <li>联动联名款：与2号梁林集群联名"建筑纹样+意式元素"书签，与5号圣心堂联名"宗教纹样+意式手工"贴纸</li>
+                                    <li>天津本地文创：非遗小物件（迷你杨柳青年画、泥人张钥匙扣）、研学纪念周边</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-gray-800 mb-2">运营方式</h5>
+                                <p class="text-gray-600">明码标价（20-199元/件），每月更新15%产品，消费满100元可兑换1号AR导览设备优惠券，形成双向联动</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-gray-800 mb-2">改造要求</h5>
+                                <p class="text-gray-600">位于兵营入口旁，空间小巧适合零售，展柜为可移动玻璃柜（不固定墙面）</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 研学专属补给站 -->
+                    <div class="bg-light rounded-lg p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white mr-4">
+                                <i class="fa fa-backpack text-lg"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-primary">研学专属补给站</h4>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div>
+                                <h5 class="font-semibold text-gray-800 mb-2">具体落地</h5>
+                                <ul class="list-disc list-inside space-y-2 text-gray-600">
+                                    <li>针对2号/5号研学人群：提供便携文具（铅笔、笔记本）、简易餐食（面包、酸奶、矿泉水）、临时储物服务</li>
+                                    <li>设置"研学成果临时展示角"（张贴学员测绘作品、手作模型），提供免费充电、打印服务（研学资料）</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-gray-800 mb-2">运营方式</h5>
+                                <p class="text-gray-600">基础服务免费，补给品平价售卖（成本价+10%毛利），工作人员协助研学团队对接2号/5号的预约</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-gray-800 mb-2">改造要求</h5>
+                                <p class="text-gray-600">占用空间约15㎡，位于餐饮区旁，方便研学人群快速补给、休整</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 模块3：南北区中途导流枢纽 -->
+            <div class="bg-white rounded-lg shadow-lg p-8 card-hover">
+                <div class="flex flex-col md:flex-row md:items-center mb-8">
+                    <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center text-white mb-4 md:mb-0 md:mr-6">
+                        <i class="fa fa-map-signs text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl md:text-2xl font-bold text-primary mb-3">模块3：南北区中途导流枢纽（占比15%）</h3>
+                        <p class="text-lg text-gray-700">二次引导，不重复1号基础导览</p>
+                    </div>
+                </div>
+                <div class="bg-light p-6 rounded-lg mb-8">
+                    <p class="text-gray-700 content-spacing">核心逻辑：1号做"起点告知"，4号地块做"中途深化引导"，针对已停留的人流，强化向北去2号/5号的动力</p>
+                </div>
+                
+                <div class="space-y-8">
+                    <!-- 北区深度体验导览墙 -->
+                    <div class="bg-light rounded-lg p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center text-white mr-4">
+                                <i class="fa fa-map text-lg"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-primary">北区深度体验导览墙</h4>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div>
+                                <h5 class="font-semibold text-gray-800 mb-2">具体落地</h5>
+                                <ul class="list-disc list-inside space-y-2 text-gray-600">
+                                    <li>不重复1号的基础路线标注，重点展示2号梁林集群、5号静享集群的"深度体验亮点"</li>
+                                    <li>张贴"南北区联动体验路线"（1号→4号手作→2号展馆→5号研学→4号晚餐→返程），标注各节点体验时长和联动优惠</li>
+                                    <li>工作人员提供"个性化路线推荐"（如亲子家庭推荐"4号手作+2号入门研学"，文化爱好者推荐"2号特展+5号深度研学"）</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-gray-800 mb-2">运营方式</h5>
+                                <p class="text-gray-600">专人轮值（1名/时段），导览墙每月更新2号/5号的活动预告（如大师课、特展），增强时效性</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-gray-800 mb-2">适配逻辑</h5>
+                                <p class="text-gray-600">位于兵营内人流必经处（如餐饮区出口、工坊门口），针对已体验过4号的人流，精准传递北区深度价值</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 主题联动活动 -->
+                    <div class="bg-light rounded-lg p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center text-white mr-4">
+                                <i class="fa fa-calendar text-lg"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-primary">主题联动活动</h4>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div>
+                                <h5 class="font-semibold text-gray-800 mb-2">具体落地</h5>
+                                <ul class="list-disc list-inside space-y-2 text-gray-600">
+                                    <li>每月举办"意式-中式建筑文化周"：联动2号梁林集群，组织"意式兵营建筑+中式古建"对比研学、艺术创作活动</li>
+                                    <li>每季度举办"租界文艺市集"：集结本地手艺人、意式小吃摊主，联动5号圣心堂推出"宗教艺术手作专区"</li>
+                                    <li>活动期间设置"导流打卡章"，4号集章后去2号/5号可兑换额外福利</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-gray-800 mb-2">运营方式</h5>
+                                <p class="text-gray-600">活动免费开放，市集摊位收取少量管理费（50元/个），通过小程序提前预告，联动1号发布活动信息</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-gray-800 mb-2">适配逻辑</h5>
+                                <p class="text-gray-600">利用兵营庭院/户外空间，活动期间临时布置，不影响日常业态，同时激活北区整体活力</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 空间联动与运营管理 -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-primary mb-8 text-center">空间联动与运营管理（强化与1号的互补闭环）</h2>
+            
+            <!-- 内部空间分配 -->
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-10">
+                <h3 class="text-xl font-bold text-primary mb-6">1. 内部空间分配（适配原意大利兵营建筑肌理）</h3>
+                
+                <div class="overflow-x-auto mb-8">
+                    <table class="w-full border-collapse">
+                        <thead>
+                            <tr class="bg-light">
+                                <th class="border border-gray-300 p-3 text-left">空间类型</th>
+                                <th class="border border-gray-300 p-3 text-left">用途</th>
+                                <th class="border border-gray-300 p-3 text-left">改造原则</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-gray-300 p-3 font-bold">兵营一层（前区）</td>
+                                <td class="border border-gray-300 p-3">意式轻食+文创零售+研学补给站</td>
+                                <td class="border border-gray-300 p-3">保留原有门窗、拱券结构，地面铺防滑地垫，墙面不打孔（展示用无痕胶）</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 p-3 font-bold">兵营一层（后区）</td>
+                                <td class="border border-gray-300 p-3">意式手工工坊+深度导览墙</td>
+                                <td class="border border-gray-300 p-3">采用可移动隔断划分空间，照明改造为低压暖光射灯，不改动建筑主体结构</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 p-3 font-bold">兵营二层</td>
+                                <td class="border border-gray-300 p-3">租界生活沉浸场景+微剧场后台</td>
+                                <td class="border border-gray-300 p-3">做基础防潮处理，场景道具均为可移动，不固定在墙面/地面</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 p-3 font-bold">兵营庭院</td>
+                                <td class="border border-gray-300 p-3">户外外摆区+微剧场+市集/活动场地</td>
+                                <td class="border border-gray-300 p-3">保留原有绿植，增设可移动座椅、花箱、投影设备，地面不硬化</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- 与周边地块联动 -->
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-10">
+                <h3 class="text-xl font-bold text-primary mb-6">2. 与周边地块联动（突出"1号导览→4号体验→2号/5号深化"闭环）</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-light p-6 rounded-lg">
+                        <h4 class="font-bold text-lg text-primary mb-3">与1号导流驿站</h4>
+                        <p class="text-gray-600">差异化互补，1号发放"北区体验优惠券"（可在4号使用），4号导览墙标注1号为"北区起点"，引导人流双向流动；1号的快闪活动可延伸至4号庭院，形成"日间轻体验→夜间深体验"的延续。</p>
+                    </div>
+                    <div class="bg-light p-6 rounded-lg">
+                        <h4 class="font-bold text-lg text-primary mb-3">与2号梁林集群</h4>
+                        <p class="text-gray-600">推出"研学+文艺"联名套餐（2号研学课程+4号手作体验+轻食，228元/人），2号研学学员可优先预约4号艺术工坊，4号的手作课作品可在2号展馆临时展示。</p>
+                    </div>
+                    <div class="bg-light p-6 rounded-lg">
+                        <h4 class="font-bold text-lg text-primary mb-3">与5号静享集群</h4>
+                        <p class="text-gray-600">共享艺术展资源（4号艺术展可在5号侧室做小型巡展），5号研学人群凭凭证享4号轻食8.5折优惠，4号的市集设置"5号主题专区"。</p>
+                    </div>
+                    <div class="bg-light p-6 rounded-lg">
+                        <h4 class="font-bold text-lg text-primary mb-3">与南区自由道</h4>
+                        <p class="text-gray-600">差异化互补（南区重商业+4号轻文艺），在南区设置"北区文艺路线指引牌"，引导南区游客经1号→4号→2号/5号，形成南北区联动。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 运营核心细则 -->
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h3 class="text-xl font-bold text-primary mb-6">3. 运营核心细则</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-bold text-lg text-dark mb-4">（1）开放与预约</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fa fa-clock-o text-secondary mt-1 mr-3"></i>
+                                <span><strong>常规开放：</strong>周一至周日 9:00-21:00（无闭店日，适配游客与居民需求）</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-calendar text-secondary mt-1 mr-3"></i>
+                                <span><strong>预约机制：</strong>手工工坊、微剧场需提前1天线上预约（小程序"NEX意巷体验"），研学团队可批量预约专属时段</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-users text-secondary mt-1 mr-3"></i>
+                                <span><strong>流量控制：</strong>瞬时最大承载量60人（餐饮区25人+体验区20人+零售/休憩区15人），避免人流拥挤破坏体验</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold text-lg text-dark mb-4">（2）人员配置（精简高效，兼顾专业与服务）</h4>
+                        <div class="overflow-x-auto">
+                            <table class="w-full border-collapse">
+                                <thead>
+                                    <tr class="bg-light">
+                                        <th class="border border-gray-300 p-3 text-left">岗位</th>
+                                        <th class="border border-gray-300 p-3 text-left">人数</th>
+                                        <th class="border border-gray-300 p-3 text-left">职责</th>
+                                        <th class="border border-gray-300 p-3 text-left">要求</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="border border-gray-300 p-3 font-bold">运营主管</td>
+                                        <td class="border border-gray-300 p-3">1名（全职）</td>
+                                        <td class="border border-gray-300 p-3">统筹业态运营、联动对接、活动策划</td>
+                                        <td class="border border-gray-300 p-3">具备文艺空间运营经验，熟悉意式文化与天津租界历史</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-gray-300 p-3 font-bold">店员/体验师</td>
+                                        <td class="border border-gray-300 p-3">3名（轮值）</td>
+                                        <td class="border border-gray-300 p-3">负责文创售卖、轻食服务、手工工坊指导</td>
+                                        <td class="border border-gray-300 p-3">掌握基础意语沟通（可选），具备艺术/手工相关基础</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-gray-300 p-3 font-bold">导览专员</td>
+                                        <td class="border border-gray-300 p-3">1名（轮值）</td>
+                                        <td class="border border-gray-300 p-3">负责深度导览咨询、路线推荐、研学预约协助</td>
+                                        <td class="border border-gray-300 p-3">熟悉北区所有核心节点的深度体验内容，能精准匹配游客需求</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="md:col-span-2">
+                        <h4 class="font-bold text-lg text-dark mb-4">（3）合规与改造红线</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fa fa-unlock-alt text-secondary mt-1 mr-3"></i>
+                                <span><strong>建筑改造：</strong>所有设施（展柜、桌椅、隔断）均为可移动设计，不打孔、不刷漆、不改动原意大利兵营的墙体、拱券、门窗；电路改造采用低压安全线路，经文物保护部门审批后施工</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-book text-secondary mt-1 mr-3"></i>
+                                <span><strong>业态合规：</strong>禁止重油烟、高噪音业态（如烧烤、大型演出），保持文艺静谧氛围；文创产品不涉及敏感内容，贴合意式与租界文化主题</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-volume-down text-secondary mt-1 mr-3"></i>
+                                <span><strong>环境维护：</strong>庭院绿植定期养护，外摆区域每日清理，噪音控制在60分贝以下，不影响周边居民生活</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 相关地块 -->
+    <section class="py-12 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-primary mb-8 text-center">相关地块</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- 2号地块 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all-300 hover:shadow-xl">
+                    <div class="relative h-40 bg-secondary flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fa fa-graduation-cap text-4xl text-white mb-2"></i>
+                            <h3 class="font-bold text-lg text-white">2号地块</h3>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg text-primary mb-2">「研学境」</h3>
+                        <p class="text-gray-600 mb-4">慢享北里·梁林建筑研学核心区·近代文化体验高地</p>
+                        <a href="district-2.html" class="text-primary hover:text-accent font-bold flex items-center">
+                            查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 3号地块 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all-300 hover:shadow-xl">
+                    <div class="relative h-40 bg-accent flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fa fa-building text-4xl text-white mb-2"></i>
+                            <h3 class="font-bold text-lg text-white">3号地块</h3>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg text-primary mb-2">「配套境」</h3>
+                        <p class="text-gray-600 mb-4">慢享北里·核心会客厅·文化配套服务中心</p>
+                        <a href="district-3.html" class="text-primary hover:text-accent font-bold flex items-center">
+                            查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 5号地块 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all-300 hover:shadow-xl">
+                    <div class="relative h-40 bg-dark flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fa fa-church text-4xl text-white mb-2"></i>
+                            <h3 class="font-bold text-lg text-white">5号地块</h3>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg text-primary mb-2">「静享境」</h3>
+                        <p class="text-gray-600 mb-4">慢享北里·租界文化静享节点·意式宗教建筑轻研学地</p>
+                        <a href="district-5.html" class="text-primary hover:text-accent font-bold flex items-center">
+                            查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary hover:bg-accent text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all-300 opacity-0 invisible">
+        <i class="fa fa-angle-up text-2xl"></i>
+    </button>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <i class="fa fa-map-marker text-secondary text-xl"></i>
+                        <span class="text-xl font-bold">慢享北里</span>
+                        <span class="text-sm opacity-70">文化生活枢纽</span>
+                    </div>
+                    <p class="mt-2 text-sm opacity-70">© 2026 慢享北里文化生活枢纽. 保留所有权利.</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-white hover:text-secondary transition-all-300">
+                        <i class="fa fa-weixin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-secondary transition-all-300">
+                        <i class="fa fa-weibo text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-secondary transition-all-300">
+                        <i class="fa fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 返回顶部按钮
+        const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // 展开/折叠功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleButtons = document.querySelectorAll('.toggle-content');
+            toggleButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetId = this.getAttribute('data-target');
+                    const targetContent = document.getElementById(targetId);
+                    const icon = this.querySelector('.fa-chevron-down');
+                    
+                    targetContent.classList.toggle('hidden');
+                    icon.classList.toggle('rotate-180');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

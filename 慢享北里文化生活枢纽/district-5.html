@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圣心堂 - 5号地块 | 慢享北里</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8B4513',
+                        secondary: '#D2B48C',
+                        accent: '#A0522D',
+                        light: '#F5F5DC',
+                        dark: '#3E2723'
+                    },
+                    fontFamily: {
+                        serif: ['Noto Serif SC', 'serif'],
+                        sans: ['Noto Sans SC', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+            .bg-opacity-80 {
+                background-opacity: 0.8;
+            }
+            .transition-all-300 {
+                transition: all 0.3s ease;
+            }
+            .card-hover {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
+            .text-body {
+                font-size: 16px;
+                line-height: 1.8;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans bg-light text-dark">
+    <!-- 导航栏 -->
+    <nav class="bg-primary text-white fixed w-full z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa fa-map-marker text-2xl"></i>
+                <span class="text-xl font-bold">慢享北里</span>
+                <span class="text-sm opacity-80">文化生活枢纽</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-secondary transition-all-300">首页</a>
+                <a href="index.html#about" class="hover:text-secondary transition-all-300">关于北里</a>
+                <a href="index.html#districts" class="hover:text-secondary transition-all-300">六境分区</a>
+                <a href="index.html#route" class="hover:text-secondary transition-all-300">慢行动线</a>
+                <a href="index.html#value" class="hover:text-secondary transition-all-300">核心价值</a>
+                <a href="index.html#contact" class="hover:text-secondary transition-all-300">联系我们</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                    <i class="fa fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- 移动端菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-primary py-2 px-4">
+            <a href="index.html" class="block py-2 hover:text-secondary transition-all-300">首页</a>
+            <a href="index.html#about" class="block py-2 hover:text-secondary transition-all-300">关于北里</a>
+            <a href="index.html#districts" class="block py-2 hover:text-secondary transition-all-300">六境分区</a>
+            <a href="index.html#route" class="block py-2 hover:text-secondary transition-all-300">慢行动线</a>
+            <a href="index.html#value" class="block py-2 hover:text-secondary transition-all-300">核心价值</a>
+            <a href="index.html#contact" class="block py-2 hover:text-secondary transition-all-300">联系我们</a>
+        </div>
+    </nav>
+
+    <!-- 英雄区 -->
+    <section class="relative h-64 md:h-80 flex items-center justify-center overflow-hidden bg-light border-2 border-primary">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Sacred%20Heart%20Church%20exterior%20with%20Italian%20Renaissance%20architecture%2C%20dome%20and%20rosary%20window%2C%20historic%20building%20in%20Tianjin%20concession%20area%2C%20warm%20sunlight%2C%20cultural%20heritage&image_size=landscape_16_9'); opacity: 0.3;"></div>
+        <div class="container mx-auto px-4 z-10 text-center">
+            <h1 class="text-3xl md:text-5xl font-bold text-primary mb-2">5号地块「圣心堂集群」</h1>
+            <p class="text-xl text-primary mb-8">宗教文化+近代租界静享集群</p>
+        </div>
+    </section>
+
+    <!-- 面包屑导航 -->
+    <section class="bg-white py-4 border-b border-gray-200">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center text-sm">
+                <a href="index.html" class="text-gray-600 hover:text-primary">首页</a>
+                <i class="fa fa-angle-right text-gray-400 mx-2"></i>
+                <a href="index.html#districts" class="text-gray-600 hover:text-primary">六境分区</a>
+                <i class="fa fa-angle-right text-gray-400 mx-2"></i>
+                <span class="text-primary font-bold">5号地块「圣心堂集群」</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心信息 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="md:col-span-2">
+                    <h2 class="text-2xl font-bold text-primary mb-8">核心定位</h2>
+                    <p class="text-gray-600 mb-10 text-body">以"<strong>分类活化、动静分区、集群联动</strong>"为原则，保留圣心堂本体宗教核心属性，将圣心医院及其他附属建筑转化为"宗教文化延伸+近代租界生活研学+低干扰配套服务"空间，打造"1个核心（圣心堂）+2个支撑（圣心医院+附属建筑）"的静享型文化集群，既激活整个地块的历史价值，又与北区4、3、1号地块形成"文艺消费-建筑研学-静享文化"的互补网络。</p>
+                </div>
+                
+                <div class="md:col-span-1">
+                    <div class="bg-light rounded-lg shadow-lg p-6 md:p-8">
+                        <h3 class="text-lg font-bold text-primary mb-6">核心信息</h3>
+                        <ul class="space-y-3 md:space-y-4">
+                            <li class="flex items-start bg-white p-3 md:p-4 rounded-lg shadow-sm">
+                                <div class="w-8 h-8 md:w-10 md:h-10 bg-primary rounded-full flex items-center justify-center text-white mr-3 md:mr-4 flex-shrink-0">
+                                    <i class="fa fa-map-marker text-sm md:text-base"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold text-primary">地块编号：</span>
+                                    <span>5号地块</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start bg-white p-3 md:p-4 rounded-lg shadow-sm">
+                                <div class="w-8 h-8 md:w-10 md:h-10 bg-secondary rounded-full flex items-center justify-center text-white mr-3 md:mr-4 flex-shrink-0">
+                                    <i class="fa fa-tag text-sm md:text-base"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold text-secondary">核心定位：</span>
+                                    <span class="text-sm md:text-base">宗教文化+近代租界静享集群</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start bg-white p-3 md:p-4 rounded-lg shadow-sm">
+                                <div class="w-8 h-8 md:w-10 md:h-10 bg-accent rounded-full flex items-center justify-center text-white mr-3 md:mr-4 flex-shrink-0">
+                                    <i class="fa fa-shopping-bag text-sm md:text-base"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold text-accent">核心业态：</span>
+                                    <span class="text-sm md:text-base">宗教文化展示、近代租界医疗文化、建筑研学、配套服务</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start bg-white p-3 md:p-4 rounded-lg shadow-sm">
+                                <div class="w-8 h-8 md:w-10 md:h-10 bg-blue-500 rounded-full flex items-center justify-center text-white mr-3 md:mr-4 flex-shrink-0">
+                                    <i class="fa fa-users text-sm md:text-base"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold text-blue-500">核心客群：</span>
+                                    <span class="text-sm md:text-base">宗教信众、文化游客、研学群体、建筑爱好者</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start bg-white p-3 md:p-4 rounded-lg shadow-sm">
+                                <div class="w-8 h-8 md:w-10 md:h-10 bg-yellow-500 rounded-full flex items-center justify-center text-white mr-3 md:mr-4 flex-shrink-0">
+                                    <i class="fa fa-star text-sm md:text-base"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold text-yellow-500">核心特质：</span>
+                                    <span class="text-sm md:text-base">静享、文化、研学、宗教、历史建筑</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 分建筑业态模块及落地内容 -->
+    <section class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-primary mb-10 text-center">分建筑业态模块及落地内容</h2>
+            
+            <!-- 模块1：圣心堂本体 -->
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-12 card-hover">
+                <div class="flex flex-col md:flex-row md:items-center mb-8">
+                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mb-4 md:mb-0 md:mr-6">
+                        <i class="fa fa-church text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl md:text-2xl font-bold text-primary mb-3">模块1：圣心堂本体（宗教核心，占比30%）</h3>
+                        <p class="text-lg text-gray-700">维持核心功能，活化附属空间</p>
+                    </div>
+                </div>
+                <div class="bg-light p-6 rounded-lg mb-8">
+                    <p class="text-gray-700 text-body">核心原则：不改变宗教活动功能，仅利用门厅、侧室等附属空间做文化展示，核心礼拜区严禁商业/研学干预</p>
+                </div>
+                
+                <div class="mb-8">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Interior%20of%20Sacred%20Heart%20Church%20with%20dome%2C%20rosary%20window%2C%20religious%20artifacts%20and%20cultural%20exhibition%20wall%2C%20historic%20Italian%20architecture%20in%20Tianjin%20concession%20area%2C%20warm%20lighting%2C%20cultural%20heritage%20preservation&image_size=landscape_16_9" alt="圣心堂内部场景" class="w-full h-64 md:h-80 object-cover rounded-lg shadow-md mb-4">
+                    <p class="text-sm text-center text-gray-500">圣心堂内部文化展示空间</p>
+                </div>
+                
+                <div class="overflow-x-auto -mx-4 px-4">
+                    <div class="min-w-[800px]">
+                    <table class="w-full border-collapse">
+                        <thead>
+                            <tr class="bg-light">
+                                <th class="border border-gray-300 p-3 text-left">空间类型</th>
+                                <th class="border border-gray-300 p-3 text-left">业态内容</th>
+                                <th class="border border-gray-300 p-3 text-left">运营方式</th>
+                                <th class="border border-gray-300 p-3 text-left">改造要求</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-gray-300 p-3 font-bold">附属门厅</td>
+                                <td class="border border-gray-300 p-3">宗教文化展示墙：<br>1. 圣心堂建馆脉络（1920年代意租界选址、建筑设计背景、传教历史）；<br>2. 意式宗教建筑核心特征图解（穹顶、玫瑰窗、柱式等，搭配建筑局部实物照片）</td>
+                                <td class="border border-gray-300 p-3">免费开放，配备扫码语音讲解（8分钟/段），无人工推销</td>
+                                <td class="border border-gray-300 p-3">墙面做防潮处理，展示板为可移动立牌（不打孔固定）</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 p-3 font-bold">侧室1</td>
+                                <td class="border border-gray-300 p-3">宗教艺术微展：陈列宗教主题插画复刻、小型雕塑模型（非传教性质，仅作艺术欣赏），每季度联合天津美术学院更新展品</td>
+                                <td class="border border-gray-300 p-3">免费参观，禁止拍照闪光灯，无商业售卖</td>
+                                <td class="border border-gray-300 p-3">采用低亮度暖光射灯，展柜为可移动玻璃柜</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 p-3 font-bold">侧室2</td>
+                                <td class="border border-gray-300 p-3">租界宗教文化文献角：摆放天津近代租界宗教建筑史料、宗教文化研究书籍（免费借阅，需押金）</td>
+                                <td class="border border-gray-300 p-3">仅开放给研学群体及文化爱好者，限10人同时使用</td>
+                                <td class="border border-gray-300 p-3">配备4组简约桌椅（可移动），地面铺防滑地垫（不改动原有地面）</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 p-3 font-bold">核心礼拜区</td>
+                                <td class="border border-gray-300 p-3">保留原有宗教活动功能，设置"宗教活动时段提示牌"，非活动时段仅开放外部参观（不进入内部）</td>
+                                <td class="border border-gray-300 p-3">严格遵循宗教场所管理规范，禁止非宗教相关人员进入</td>
+                                <td class="border border-gray-300 p-3">零改造，仅在入口处设置引导标识</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 模块2：圣心医院 -->
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-12 card-hover">
+                <div class="flex flex-col md:flex-row md:items-center mb-8">
+                    <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center text-white mb-4 md:mb-0 md:mr-6">
+                        <i class="fa fa-hospital-o text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl md:text-2xl font-bold text-primary mb-3">模块2：圣心医院（历史建筑，占比40%）</h3>
+                        <p class="text-lg text-gray-700">近代租界医疗文化+建筑研学延伸</p>
+                    </div>
+                </div>
+                <div class="bg-light p-6 rounded-lg mb-8">
+                    <p class="text-gray-700 text-body">核心逻辑：利用医院建筑的历史属性，打造"租界医疗生活+意式公共建筑研学"场景，联动3号梁林建筑研学</p>
+                </div>
+                
+                <div class="mb-8">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Interior%20of%20Sacred%20Heart%20Hospital%20in%20Tianjin%20concession%20area%2C%201930s%20medical%20scene%20reconstruction%2C%20vintage%20medical%20equipment%2C%20historic%20architecture%20with%20arch%20structure%2C%20cultural%20exhibition%20space%2C%20warm%20lighting%2C%20heritage%20preservation&image_size=landscape_16_9" alt="圣心医院内部场景" class="w-full h-64 md:h-80 object-cover rounded-lg shadow-md mb-4">
+                    <p class="text-sm text-center text-gray-500">圣心医院近代医疗文化展</p>
+                </div>
+                
+                <div class="overflow-x-auto -mx-4 px-4">
+                    <div class="min-w-[800px]">
+                    <table class="w-full border-collapse">
+                        <thead>
+                            <tr class="bg-light">
+                                <th class="border border-gray-300 p-3 text-left">楼层/空间</th>
+                                <th class="border border-gray-300 p-3 text-left">业态内容</th>
+                                <th class="border border-gray-300 p-3 text-left">运营方式</th>
+                                <th class="border border-gray-300 p-3 text-left">适配亮点</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-gray-300 p-3 font-bold">一层大厅</td>
+                                <td class="border border-gray-300 p-3">近代租界医疗文化展：<br>1. 陈列圣心医院历史（1920年代意租界医疗设施、接诊场景老照片、旧医疗器械复刻模型）；<br>2. 展示"天津租界公共建筑演变"（对比圣心医院<意式公共建筑>与梁林测绘古建筑的差异）</td>
+                                <td class="border border-gray-300 p-3">免费开放，设置互动问答墙（如"租界医院与传统中医馆的区别"）</td>
+                                <td class="border border-gray-300 p-3">医院大厅挑高空间适合展陈，保留原有门窗、墙面肌理</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 p-3 font-bold">一层西侧诊室</td>
+                                <td class="border border-gray-300 p-3">意式公共建筑研学工坊：<br>1. 针对学生/建筑爱好者，开展"圣心医院建筑测绘体验"（解析医院拱券结构、走廊空间设计）；<br>2. 联动3号地块推出"租界公共建筑+中式古建筑"双主题研学</td>
+                                <td class="border border-gray-300 p-3">预约制，每场限12人，收费58元/人（含工具、讲解）</td>
+                                <td class="border border-gray-300 p-3">诊室空间小巧，适合分组研学，保留原有诊疗台（作为展示道具）</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 p-3 font-bold">二层病房区</td>
+                                <td class="border border-gray-300 p-3">租界生活场景复原展：<br>1. 复原1930年代租界居民就医、生活的场景（搭配旧家具、服饰、生活用品）；<br>2. 设置"租界医疗文化科普"互动屏（点击查看租界卫生防疫、医疗制度）</td>
+                                <td class="border border-gray-300 p-3">免费参观，可拍照留念，设置"打卡点"引导分享</td>
+                                <td class="border border-gray-300 p-3">病房空间独立，适合场景复原，采用可移动道具（不固定在建筑）</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 p-3 font-bold">庭院（医院与圣心堂之间）</td>
+                                <td class="border border-gray-300 p-3">医疗文化静享区：设置6组户外休闲座椅，摆放"租界医疗小故事"展板，提供免费饮用水</td>
+                                <td class="border border-gray-300 p-3">免费开放，禁止喧哗，作为研学群体休憩、交流空间</td>
+                                <td class="border border-gray-300 p-3">庭院绿植保留，增设简约指示牌，不改动原有绿化</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 模块3：其他附属建筑 -->
+            <div class="bg-white rounded-lg shadow-lg p-8 card-hover">
+                <div class="flex flex-col md:flex-row md:items-center mb-8">
+                    <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center text-white mb-4 md:mb-0 md:mr-6">
+                        <i class="fa fa-building text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl md:text-2xl font-bold text-primary mb-3">模块3：其他附属建筑（小型洋楼/平房，占比30%）</h3>
+                        <p class="text-lg text-gray-700">配套服务+研学延伸</p>
+                    </div>
+                </div>
+                <div class="bg-light p-6 rounded-lg mb-8">
+                    <p class="text-gray-700 text-body">核心功能：弥补地块"配套不足"短板，为整个集群提供轻服务，不做重商业</p>
+                </div>
+                
+                <div class="mb-8">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Interior%20of%20small%20Western-style%20building%20in%20Tianjin%20concession%20area%2C%20cultural%20handicraft%20workshop%20and%20reading%20space%2C%20vintage%20furniture%2C%20bookshelves%2C%20artistic%20atmosphere%2C%20warm%20lighting%2C%20heritage%20preservation&image_size=landscape_16_9" alt="附属建筑内部场景" class="w-full h-64 md:h-80 object-cover rounded-lg shadow-md mb-4">
+                    <p class="text-sm text-center text-gray-500">附属建筑手作室与阅读吧</p>
+                </div>
+                
+                <div class="overflow-x-auto -mx-4 px-4">
+                    <div class="min-w-[800px]">
+                    <table class="w-full border-collapse">
+                        <thead>
+                            <tr class="bg-light">
+                                <th class="border border-gray-300 p-3 text-left">建筑编号（假设3栋小型建筑）</th>
+                                <th class="border border-gray-300 p-3 text-left">业态内容</th>
+                                <th class="border border-gray-300 p-3 text-left">运营方式</th>
+                                <th class="border border-gray-300 p-3 text-left">适配逻辑</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-gray-300 p-3 font-bold">附属建筑A（靠近入口）</td>
+                                <td class="border border-gray-300 p-3">研学接待中心：<br>1. 负责地块5所有研学活动预约、报名，发放研学手册（含圣心堂+圣心医院+3号地块联动路线）；<br>2. 提供简易便民服务（手机充电、行李寄存柜）</td>
+                                <td class="border border-gray-300 p-3">工作人员1名（轮值），研学预约可线上+线下同步</td>
+                                <td class="border border-gray-300 p-3">靠近地块入口，方便游客第一时间咨询，空间小巧适合接待</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 p-3 font-bold">附属建筑B</td>
+                                <td class="border border-gray-300 p-3">宗教-建筑主题文创手作室：<br>1. 以圣心堂建筑纹样、圣心医院历史元素为原型，开设"纹样拓印""极简建筑绘画"体验；<br>2. 手作材料环保，成品可带走（仅收材料成本15元/人）</td>
+                                <td class="border border-gray-300 p-3">预约制，每场限8人，由艺术志愿者指导</td>
+                                <td class="border border-gray-300 p-3">小型洋楼空间私密，适合安静手作，不干扰核心区域</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 p-3 font-bold">附属建筑C</td>
+                                <td class="border border-gray-300 p-3">租界文化轻阅读吧：<br>1. 摆放天津租界历史、建筑、宗教、医疗相关书籍（免费借阅）；<br>2. 提供免费茶水（无餐饮售卖），设置"租界文化分享角"（每周日下午举办小型读书分享会）</td>
+                                <td class="border border-gray-300 p-3">免费开放，限15人同时使用，分享会需提前预约</td>
+                                <td class="border border-gray-300 p-3">环境安静，适合深度阅读，与整个地块"静享"氛围契合</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 空间联动与运营管理 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-primary mb-10 text-center">空间联动与运营管理</h2>
+            
+            <!-- 地块内部联动 -->
+            <div class="mb-12">
+                <h3 class="text-xl font-bold text-primary mb-8">1. 地块内部联动（动静分区，避免干扰）</h3>
+                
+                <div class="overflow-x-auto -mx-4 px-4">
+                    <div class="min-w-[800px]">
+                    <table class="w-full border-collapse">
+                        <thead>
+                            <tr class="bg-light">
+                                <th class="border border-gray-300 p-3 text-left">功能分区</th>
+                                <th class="border border-gray-300 p-3 text-left">核心空间</th>
+                                <th class="border border-gray-300 p-3 text-left">氛围要求</th>
+                                <th class="border border-gray-300 p-3 text-left">联动方式</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-gray-300 p-3 font-bold">静享展示区</td>
+                                <td class="border border-gray-300 p-3">圣心堂本体、圣心医院二层</td>
+                                <td class="border border-gray-300 p-3">噪音≤45分贝，禁止喧哗</td>
+                                <td class="border border-gray-300 p-3">设置"静享区"提示牌，地面贴引导地贴，串联各展示空间</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 p-3 font-bold">研学体验区</td>
+                                <td class="border border-gray-300 p-3">圣心医院一层、附属建筑B</td>
+                                <td class="border border-gray-300 p-3">有序组织，分组开展活动</td>
+                                <td class="border border-gray-300 p-3">研学路线：研学接待中心（A）→ 圣心医院研学工坊 → 圣心堂文献角 → 附属建筑B手作室</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 p-3 font-bold">配套服务区</td>
+                                <td class="border border-gray-300 p-3">附属建筑A、C、庭院</td>
+                                <td class="border border-gray-300 p-3">便捷舒适，服务于核心业态</td>
+                                <td class="border border-gray-300 p-3">配套空间与核心空间保持10米以上距离，避免服务活动干扰展示/研学</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 与北区其他地块联动 -->
+            <div class="mb-12">
+                <h3 class="text-xl font-bold text-primary mb-8">2. 与北区其他地块联动</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-light p-6 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white mr-4">
+                                <i class="fa fa-link"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-primary">与3号核心会客厅</h4>
+                        </div>
+                        <p class="text-gray-600 text-body">共享研学资源，3号"梁林建筑研学"学员可享5号研学8折优惠，推出"中式古建筑+租界建筑"联合研学套餐（168元/人）</p>
+                    </div>
+                    
+                    <div class="bg-light p-6 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white mr-4">
+                                <i class="fa fa-map-signs"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-primary">与1号导流驿站</h4>
+                        </div>
+                        <p class="text-gray-600 text-body">导览手册标注"地块5静享文化集群"，提供步行路线（8分钟直达），散客可领取"手作体验优惠券"</p>
+                    </div>
+                    
+                    <div class="bg-light p-6 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center text-white mr-4">
+                                <i class="fa fa-exchange"></i>
+                            </div>
+                            <h4 class="text-lg font-bold text-primary">与4号特色会客厅</h4>
+                        </div>
+                        <p class="text-gray-600 text-body">附属建筑C的读书分享会可邀请4号艺术机构专家主讲，4号的艺术展可在圣心堂侧室做小型巡展</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 开放时间与流量控制 -->
+            <div class="mb-12">
+                <h3 class="text-xl font-bold text-primary mb-8">3. 开放时间与流量控制</h3>
+                
+                <div class="overflow-x-auto -mx-4 px-4">
+                    <div class="min-w-[800px]">
+                    <table class="w-full border-collapse">
+                        <thead>
+                            <tr class="bg-light">
+                                <th class="border border-gray-300 p-3 text-left">空间类型</th>
+                                <th class="border border-gray-300 p-3 text-left">开放时间</th>
+                                <th class="border border-gray-300 p-3 text-left">瞬时最大承载量</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-gray-300 p-3 font-bold">圣心堂本体</td>
+                                <td class="border border-gray-300 p-3">周二至周日 9:00-11:30、14:00-16:30（周一闭馆），周日上午宗教活动时段仅开放附属空间</td>
+                                <td class="border border-gray-300 p-3">15人</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 p-3 font-bold">圣心医院</td>
+                                <td class="border border-gray-300 p-3">周二至周日 9:00-17:00（周一闭馆）</td>
+                                <td class="border border-gray-300 p-3">25人</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 p-3 font-bold">附属建筑</td>
+                                <td class="border border-gray-300 p-3">与圣心医院开放时间一致</td>
+                                <td class="border border-gray-300 p-3">20人</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 p-3 font-bold">整体地块</td>
+                                <td class="border border-gray-300 p-3">周二至周日 9:00-17:00（周一闭馆）</td>
+                                <td class="border border-gray-300 p-3">单日最大接待量100人（含研学+散客）</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 人员配置 -->
+            <div>
+                <h3 class="text-xl font-bold text-primary mb-8">4. 人员配置（精简专业）</h3>
+                
+                <div class="overflow-x-auto -mx-4 px-4">
+                    <div class="min-w-[800px]">
+                    <table class="w-full border-collapse">
+                        <thead>
+                            <tr class="bg-light">
+                                <th class="border border-gray-300 p-3 text-left">岗位</th>
+                                <th class="border border-gray-300 p-3 text-left">人数</th>
+                                <th class="border border-gray-300 p-3 text-left">职责</th>
+                                <th class="border border-gray-300 p-3 text-left">要求</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-gray-300 p-3 font-bold">宗教场所管理员</td>
+                                <td class="border border-gray-300 p-3">1名（兼职）</td>
+                                <td class="border border-gray-300 p-3">监督圣心堂本体业态合规性，协调宗教活动与参观冲突</td>
+                                <td class="border border-gray-300 p-3">熟悉宗教场所管理规范，了解圣心堂历史</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 p-3 font-bold">研学导师</td>
+                                <td class="border border-gray-300 p-3">2名（兼职）</td>
+                                <td class="border border-gray-300 p-3">开展圣心医院、圣心堂建筑研学，联动3号地块路线</td>
+                                <td class="border border-gray-300 p-3">建筑/历史相关专业背景，具备讲解经验</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 p-3 font-bold">文化志愿者</td>
+                                <td class="border border-gray-300 p-3">3名（轮值）</td>
+                                <td class="border border-gray-300 p-3">负责展示区引导、书籍借阅、手作体验辅助</td>
+                                <td class="border border-gray-300 p-3">熟悉天津租界文化，性格沉稳有耐心</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 p-3 font-bold">运营专员</td>
+                                <td class="border border-gray-300 p-3">1名（全职）</td>
+                                <td class="border border-gray-300 p-3">统筹地块整体运营、预约管理、联动对接</td>
+                                <td class="border border-gray-300 p-3">具备历史建筑运营经验，了解文物保护要求</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 改造与合规核心注意事项 -->
+    <section class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-primary mb-10 text-center">改造与合规核心注意事项</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mr-4">
+                            <i class="fa fa-university text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary">文物保护</h3>
+                    </div>
+                    <p class="text-gray-600 text-body">所有建筑均采用"轻改造、可可逆"原则，设施（展柜、桌椅、展牌）均为可移动设计，不打孔、不刷漆、不改动建筑本体（墙体、门窗、地面、柱式）</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-white mr-4">
+                            <i class="fa fa-cross text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary">宗教规范</h3>
+                    </div>
+                    <p class="text-gray-600 text-body">严禁任何传教性质的展示、活动，所有业态仅聚焦"文化、历史、建筑"层面，核心礼拜区严格封闭管理，非宗教人员不得进入</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-white mr-4">
+                            <i class="fa fa-shield text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary">安全合规</h3>
+                    </div>
+                    <p class="text-gray-600 text-body">电路改造需经文物保护部门审批，采用低压安全设备；配备简易消防器材（不破坏建筑布局）；医疗展的器械模型需标注"非实物，仅作展示"</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white mr-4">
+                            <i class="fa fa-volume-down text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary">氛围控制</h3>
+                    </div>
+                    <p class="text-gray-600 text-body">全程禁止重商业（餐饮、零售）、嘈杂活动（演出、市集），所有业态均围绕"静享、文化、研学"展开，维持地块肃穆、雅致的氛围</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 相关地块 -->
+    <section class="py-12 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-primary mb-8 text-center">相关地块</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- 2号地块 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all-300 hover:shadow-xl">
+                    <div class="relative h-40 bg-secondary flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fa fa-graduation-cap text-4xl text-white mb-2"></i>
+                            <h3 class="font-bold text-lg text-white">2号地块</h3>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg text-primary mb-2">「研学境」</h3>
+                        <p class="text-gray-600 mb-4">慢享北里·梁林建筑研学核心区·近代文化体验高地</p>
+                        <a href="district-2.html" class="text-primary hover:text-accent font-bold flex items-center">
+                            查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 3号地块 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all-300 hover:shadow-xl">
+                    <div class="relative h-40 bg-accent flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fa fa-building text-4xl text-white mb-2"></i>
+                            <h3 class="font-bold text-lg text-white">3号地块</h3>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg text-primary mb-2">「配套境」</h3>
+                        <p class="text-gray-600 mb-4">慢享北里·核心会客厅·文化配套服务中心</p>
+                        <a href="district-3.html" class="text-primary hover:text-accent font-bold flex items-center">
+                            查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 4号地块 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all-300 hover:shadow-xl">
+                    <div class="relative h-40 bg-primary flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fa fa-paint-brush text-4xl text-white mb-2"></i>
+                            <h3 class="font-bold text-lg text-white">4号地块</h3>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg text-primary mb-2">「意巷境」</h3>
+                        <p class="text-gray-600 mb-4">慢享北里·意式文艺核心·南北区人流承接枢纽</p>
+                        <a href="district-4.html" class="text-primary hover:text-accent font-bold flex items-center">
+                            查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary hover:bg-accent text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all-300 opacity-0 invisible">
+        <i class="fa fa-angle-up text-2xl"></i>
+    </button>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <i class="fa fa-map-marker text-secondary text-xl"></i>
+                        <span class="text-xl font-bold">慢享北里</span>
+                        <span class="text-sm opacity-70">文化生活枢纽</span>
+                    </div>
+                    <p class="mt-2 text-sm opacity-70">© 2026 慢享北里文化生活枢纽. 保留所有权利.</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-white hover:text-secondary transition-all-300">
+                        <i class="fa fa-weixin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-secondary transition-all-300">
+                        <i class="fa fa-weibo text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-secondary transition-all-300">
+                        <i class="fa fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 返回顶部按钮
+        const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>梁林建筑集群 - 2号地块 | 慢享北里</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8B4513',
+                        secondary: '#D2B48C',
+                        accent: '#A0522D',
+                        light: '#F5F5DC',
+                        dark: '#3E2723'
+                    },
+                    fontFamily: {
+                        serif: ['Noto Serif SC', 'serif'],
+                        sans: ['Noto Sans SC', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+            .bg-opacity-80 {
+                background-opacity: 0.8;
+            }
+            .transition-all-300 {
+                transition: all 0.3s ease;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans bg-light text-dark">
+    <!-- 导航栏 -->
+    <nav class="bg-primary text-white fixed w-full z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa fa-map-marker text-2xl"></i>
+                <span class="text-xl font-bold">慢享北里</span>
+                <span class="text-sm opacity-80">文化生活枢纽</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-secondary transition-all-300">首页</a>
+                <a href="index.html#about" class="hover:text-secondary transition-all-300">关于北里</a>
+                <a href="index.html#districts" class="hover:text-secondary transition-all-300">六境分区</a>
+                <a href="index.html#route" class="hover:text-secondary transition-all-300">慢行动线</a>
+                <a href="index.html#value" class="hover:text-secondary transition-all-300">核心价值</a>
+                <a href="index.html#contact" class="hover:text-secondary transition-all-300">联系我们</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                    <i class="fa fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- 移动端菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-primary py-2 px-4">
+            <a href="index.html" class="block py-2 hover:text-secondary transition-all-300">首页</a>
+            <a href="index.html#about" class="block py-2 hover:text-secondary transition-all-300">关于北里</a>
+            <a href="index.html#districts" class="block py-2 hover:text-secondary transition-all-300">六境分区</a>
+            <a href="index.html#route" class="block py-2 hover:text-secondary transition-all-300">慢行动线</a>
+            <a href="index.html#value" class="block py-2 hover:text-secondary transition-all-300">核心价值</a>
+            <a href="index.html#contact" class="block py-2 hover:text-secondary transition-all-300">联系我们</a>
+        </div>
+    </nav>
+
+    <!-- 英雄区 -->
+    <section class="relative h-64 md:h-80 flex items-center justify-center overflow-hidden bg-primary">
+        <div class="container mx-auto px-4 z-10 text-center">
+            <h1 class="text-3xl md:text-5xl font-bold text-white mb-2 text-shadow">2号地块「梁林建筑集群」</h1>
+            <p class="text-xl text-white text-shadow">慢享北里·梁林IP深度体验·建筑研学高地·文化社交枢纽</p>
+        </div>
+    </section>
+
+    <!-- 面包屑导航 -->
+    <section class="bg-white py-4 border-b border-gray-200">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center text-sm">
+                <a href="index.html" class="text-gray-600 hover:text-primary">首页</a>
+                <i class="fa fa-angle-right text-gray-400 mx-2"></i>
+                <a href="index.html#districts" class="text-gray-600 hover:text-primary">六境分区</a>
+                <i class="fa fa-angle-right text-gray-400 mx-2"></i>
+                <span class="text-primary font-bold">2号地块「梁林建筑集群」</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心信息 -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="md:col-span-2">
+                    <h2 class="text-2xl font-bold text-primary mb-6">核心定位</h2>
+                    <p class="text-gray-600 mb-8">地块2作为"梁思成林徽因家族纪念馆群落核心承载地"，定位为"梁林IP深度体验+建筑研学高地+文化社交枢纽"，以梁林建筑思想、近代建筑研究成果为核心，串联3号（原核心会客厅配套）、5号（圣心堂租界建筑），打造"中式古建筑+意式租界建筑"的复合型文化体验集群，既强化梁林IP的独家性，又通过"体验-研学-消费"闭环激活北区经济动力，全程遵循"保护历史建筑本体+深化文化价值"原则。</p>
+                </div>
+                
+                <div class="md:col-span-1">
+                    <div class="bg-light rounded-lg shadow-md p-6 mb-6">
+                        <h3 class="text-lg font-bold text-primary mb-4">核心信息</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fa fa-map-marker text-secondary mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">地块编号：</span>
+                                    <span>2号地块</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-tag text-secondary mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">核心定位：</span>
+                                    <span>梁林IP深度体验+建筑研学高地+文化社交枢纽</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-shopping-bag text-secondary mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">核心业态：</span>
+                                    <span>梁林建筑文化核心展馆+建筑研学高地+梁林主题文化社交+消费</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-users text-secondary mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">核心客群：</span>
+                                    <span>文化爱好者、研学群体、建筑从业者、本地居民</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-star text-secondary mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold">核心特质：</span>
+                                    <span>IP深度体验·专业研学·文化社交·主客共享</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 业态模块 -->
+    <section class="py-12 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-primary mb-8 text-center">业态模块及落地内容</h2>
+            
+            <!-- 模块1：梁林建筑文化核心展馆 -->
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-10">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mr-4">
+                        <i class="fa fa-university text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary">模块1：梁林建筑文化核心展馆（占比40%）—— IP灵魂承载</h3>
+                </div>
+                <p class="text-gray-600 mb-6">核心逻辑：利用集群内核心洋楼，打造"沉浸式+场景化"的梁林文化展示，区别于普通纪念馆的陈列模式</p>
+                
+                <!-- 价格信息卡片 -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-white rounded-lg shadow-md border-l-4 border-primary p-5 transition-all-300 hover:shadow-lg">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="font-bold text-lg text-primary">梁林工作生活场景复原馆</h4>
+                            <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-bold">30元/人</span>
+                        </div>
+                        <p class="text-gray-600 mb-3">配备专业讲解员（每30分钟一场），支持扫码AR互动</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">专业讲解</span>
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">AR互动</span>
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">场景复原</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md border-l-4 border-secondary p-5 transition-all-300 hover:shadow-lg">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="font-bold text-lg text-primary">近代建筑研究成果展</h4>
+                            <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-bold">免费</span>
+                        </div>
+                        <p class="text-gray-600 mb-3">特展可收取20元/人门票，每季度更新特展内容</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">免费开放</span>
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">学术交流</span>
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">定期更新</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md border-l-4 border-accent p-5 transition-all-300 hover:shadow-lg">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="font-bold text-lg text-primary">数字沉浸体验厅</h4>
+                            <span class="bg-accent text-white px-3 py-1 rounded-full text-sm font-bold">20元/人</span>
+                        </div>
+                        <p class="text-gray-600 mb-3">VR体验收费20元/人，投影秀免费（每日3场）</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">VR体验</span>
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">3D投影秀</span>
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">免费场次</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 空间功能详情 -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-white rounded-lg shadow-md border-l-4 border-primary p-5 transition-all-300 hover:shadow-lg">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="font-bold text-lg text-primary">梁林工作生活场景复原馆</h4>
+                            <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-bold">30元/人</span>
+                        </div>
+                        <ul class="text-gray-600 mb-3 space-y-2">
+                            <li>• 还原梁林在天津的研学工作场景（复刻测绘桌、手稿、老式相机、书架，搭配当时的服饰、生活用品）</li>
+                            <li>• 复原"营造学社天津工作站"场景（陈列《营造法式》复刻版、古建筑模型、测绘工具）</li>
+                            <li>• 设置"梁林与天津建筑"互动墙（标注他们考察过的天津近代建筑、与本地文化的关联）</li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">专业讲解</span>
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">AR互动</span>
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">每30分钟一场</span>
+                        </div>
+                        <p class="text-sm text-secondary italic">利用集群内保存完好的洋楼，场景化展示增强代入感</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md border-l-4 border-secondary p-5 transition-all-300 hover:shadow-lg">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="font-bold text-lg text-primary">近代建筑研究成果展</h4>
+                            <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-bold">免费</span>
+                        </div>
+                        <ul class="text-gray-600 mb-3 space-y-2">
+                            <li>• 陈列梁林测绘的古建筑手稿复刻件（如应县木塔、蓟县独乐寺）、建筑理论著作（《清式营造则例》节选）</li>
+                            <li>• 展示"梁林建筑思想对当代的影响"（现代建筑中榫卯结构、中式美学的应用案例）</li>
+                            <li>• 联动国内建筑博物馆，定期举办"近代建筑学术特展"（如"梁林与中国建筑遗产保护"主题展）</li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">特展20元</span>
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">季度更新</span>
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">学术交流区</span>
+                        </div>
+                        <p class="text-sm text-secondary italic">空间规整，适合大型展陈，墙面采用可移动展架</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md border-l-4 border-accent p-5 transition-all-300 hover:shadow-lg">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="font-bold text-lg text-primary">数字沉浸体验厅</h4>
+                            <span class="bg-accent text-white px-3 py-1 rounded-full text-sm font-bold">20元/人</span>
+                        </div>
+                        <ul class="text-gray-600 mb-3 space-y-2">
+                            <li>• 打造"跟着梁林测古建"VR体验（还原应县木塔、独乐寺的测绘过程，游客可模拟操作测绘工具）</li>
+                            <li>• 3D投影秀：在洋楼庭院播放"梁林建筑人生"短片（15分钟/场），搭配建筑纹样光影特效</li>
+                            <li>• 每日3场免费投影秀（11:00、15:00、19:00）</li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">VR体验</span>
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">免费投影秀</span>
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">15分钟/场</span>
+                        </div>
+                        <p class="text-sm text-secondary italic">利用洋楼庭院的围合感，数字技术增强体验感</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 模块2：建筑研学高地 -->
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-10">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mr-4">
+                        <i class="fa fa-graduation-cap text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary">模块2：建筑研学高地（占比35%）—— 专业级研学承载</h3>
+                </div>
+                <p class="text-gray-600 mb-6">核心逻辑：依托梁林IP的专业属性，打造"从入门到进阶"的建筑研学体系，联动5号租界建筑形成差异化研学</p>
+                
+                <!-- 研学价格信息卡片 -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-white rounded-lg shadow-md border-l-4 border-primary p-5 transition-all-300 hover:shadow-lg">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="font-bold text-lg text-primary">梁林建筑思想入门工坊</h4>
+                            <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-bold">68元/人</span>
+                        </div>
+                        <p class="text-gray-600 mb-3">预约制，每场限15人，含工具、材料、证书，每日3场</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">榫卯结构</span>
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">纹样拓印</span>
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">建筑测绘</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md border-l-4 border-secondary p-5 transition-all-300 hover:shadow-lg">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="font-bold text-lg text-primary">近代建筑进阶研学营</h4>
+                            <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-bold">198元/人</span>
+                        </div>
+                        <p class="text-gray-600 mb-3">需提前3天预约，每场限10人，含双主题研学</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">专业课程</span>
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">双主题研学</span>
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">专家授课</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md border-l-4 border-accent p-5 transition-all-300 hover:shadow-lg">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="font-bold text-lg text-primary">梁林杯青少年建筑设计大赛</h4>
+                            <span class="bg-accent text-white px-3 py-1 rounded-full text-sm font-bold">50元/人</span>
+                        </div>
+                        <p class="text-gray-600 mb-3">展示墙免费开放，获奖作品可获得文创礼包+研学奖学金</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">成果展示</span>
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">设计大赛</span>
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">巡展机会</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 研学类型卡片 -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <!-- 梁林建筑思想入门工坊 -->
+                    <div class="bg-white rounded-lg shadow-md border-l-4 border-primary p-5 transition-all-300 hover:shadow-lg">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="font-bold text-lg text-primary">梁林建筑思想入门工坊</h4>
+                            <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-bold">68元/人</span>
+                        </div>
+                        <h5 class="font-bold text-gray-700 mb-2">具体落地：</h5>
+                        <ul class="text-gray-600 mb-3 space-y-2">
+                            <li>• 针对青少年/普通游客：开设"榫卯结构搭建体验""古建筑纹样拓印""简易建筑测绘"课程</li>
+                            <li>• 配套"梁林研学手册"（含建筑知识点、实践步骤、打卡任务）</li>
+                            <li>• 完成课程可获得"梁林建筑研学证书"（定制化打印，含集群Logo）</li>
+                        </ul>
+                        <h5 class="font-bold text-gray-700 mb-2">运营方式：</h5>
+                        <p class="text-gray-600 mb-3">预约制，每场限15人，收费68元/人（含工具、材料、证书），每日3场</p>
+                        <h5 class="font-bold text-gray-700 mb-2">适配空间：</h5>
+                        <p class="text-gray-600 mb-3">集群内小型洋楼/庭院，分组开展，可移动桌椅不破坏地面</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">适合青少年</span>
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">动手体验</span>
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">每日3场</span>
+                        </div>
+                    </div>
+                    
+                    <!-- 近代建筑进阶研学营 -->
+                    <div class="bg-white rounded-lg shadow-md border-l-4 border-secondary p-5 transition-all-300 hover:shadow-lg">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="font-bold text-lg text-primary">近代建筑进阶研学营</h4>
+                            <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-bold">198元/人</span>
+                        </div>
+                        <h5 class="font-bold text-gray-700 mb-2">具体落地：</h5>
+                        <ul class="text-gray-600 mb-3 space-y-2">
+                            <li>• 针对建筑专业学生/爱好者：开设"中式古建筑形制研究""梁林测绘方法实操""天津近代建筑对比分析"课程</li>
+                            <li>• 联动5号圣心堂，推出"中式古建筑+意式租界建筑"双主题研学（上午地块2学中式，下午5号学租界建筑）</li>
+                            <li>• 邀请建筑学者、梁林研究专家驻场授课（每月1场大师课）</li>
+                        </ul>
+                        <h5 class="font-bold text-gray-700 mb-2">运营方式：</h5>
+                        <p class="text-gray-600 mb-3">进阶课程收费198元/人，大师课收费398元/人，需提前3天预约，每场限10人</p>
+                        <h5 class="font-bold text-gray-700 mb-2">适配空间：</h5>
+                        <p class="text-gray-600 mb-3">核心展馆旁的研讨空间，配备投影、学术书籍，适合深度交流</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">专业课程</span>
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">双主题研学</span>
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">专家授课</span>
+                        </div>
+                    </div>
+                    
+                    <!-- 研学成果孵化平台 -->
+                    <div class="bg-white rounded-lg shadow-md border-l-4 border-accent p-5 transition-all-300 hover:shadow-lg">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="font-bold text-lg text-primary">研学成果孵化平台</h4>
+                            <span class="bg-accent text-white px-3 py-1 rounded-full text-sm font-bold">50元/人</span>
+                        </div>
+                        <h5 class="font-bold text-gray-700 mb-2">具体落地：</h5>
+                        <ul class="text-gray-600 mb-3 space-y-2">
+                            <li>• 设置"研学成果展示墙"（张贴学员测绘作品、手作模型、研究报告）</li>
+                            <li>• 每年举办"梁林杯青少年建筑设计大赛"（围绕"传统与现代融合"主题）</li>
+                            <li>• 优秀成果可在集群内举办小型巡展，联动天津本地建筑展馆推广</li>
+                        </ul>
+                        <h5 class="font-bold text-gray-700 mb-2">运营方式：</h5>
+                        <p class="text-gray-600 mb-3">展示墙免费开放，大赛收取报名费50元/人，获奖作品可获得文创礼包+研学奖学金</p>
+                        <h5 class="font-bold text-gray-700 mb-2">适配空间：</h5>
+                        <p class="text-gray-600 mb-3">集群内公共庭院/附属建筑，激活研学后续价值，扩大IP影响力</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">成果展示</span>
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">设计大赛</span>
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">巡展机会</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 模块3：梁林主题文化社交+消费 -->
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white mr-4">
+                        <i class="fa fa-coffee text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary">模块3：梁林主题文化社交+消费（占比25%）—— 活力转化承载</h3>
+                </div>
+                <p class="text-gray-600 mb-6">核心原则："轻社交+IP衍生消费"，不破坏文化氛围，实现主客共享与经济转化</p>
+                
+                <!-- 社交消费价格信息卡片 -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-white rounded-lg shadow-md border-l-4 border-primary p-5 transition-all-300 hover:shadow-lg">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="font-bold text-lg text-primary">营造学社主题茶座</h4>
+                            <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-bold">30-50元/人</span>
+                        </div>
+                        <p class="text-gray-600 mb-3">营业时间9:00-20:00，禁止大声交谈，营造安静社交氛围</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">梁林主题</span>
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">文化社交</span>
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">免费借阅</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md border-l-4 border-secondary p-5 transition-all-300 hover:shadow-lg">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="font-bold text-lg text-primary">梁林IP高端文创集合店</h4>
+                            <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-bold">29-299元</span>
+                        </div>
+                        <p class="text-gray-600 mb-3">文创产品定价29-299元，研学学员可享8折优惠</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">独家定制</span>
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">非遗联名</span>
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">研学优惠</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md border-l-4 border-accent p-5 transition-all-300 hover:shadow-lg">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="font-bold text-lg text-primary">建筑文化沙龙空间</h4>
+                            <span class="bg-accent text-white px-3 py-1 rounded-full text-sm font-bold">免费/2000元</span>
+                        </div>
+                        <p class="text-gray-600 mb-3">公益沙龙免费预约，商业活动收费2000元/场（含场地、茶歇）</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">思想分享</span>
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">跨界沙龙</span>
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">学术交流</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 业态内容卡片 -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <!-- 营造学社主题茶座 -->
+                    <div class="bg-white rounded-lg shadow-md border-l-4 border-primary p-5 transition-all-300 hover:shadow-lg">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="font-bold text-lg text-primary">营造学社主题茶座</h4>
+                            <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-bold">30-50元/人</span>
+                        </div>
+                        <h5 class="font-bold text-gray-700 mb-2">具体落地：</h5>
+                        <ul class="text-gray-600 mb-3 space-y-2">
+                            <li>• 以"梁林旅居地饮食"为特色（如北京豆汁焦圈、云南普洱茶、西式咖啡），搭配低糖点心（无重油烟）</li>
+                            <li>• 软装融入建筑元素（榫卯结构桌椅、墙面挂建筑手稿复刻件、杯垫印建筑纹样）</li>
+                            <li>• 设置"建筑书籍角"（摆放梁林著作、近代建筑研究书籍，可免费借阅）</li>
+                        </ul>
+                        <h5 class="font-bold text-gray-700 mb-2">运营方式：</h5>
+                        <p class="text-gray-600 mb-3">营业时间9:00-20:00，人均消费30-50元，禁止大声交谈，营造安静社交氛围</p>
+                        <h5 class="font-bold text-gray-700 mb-2">适配逻辑：</h5>
+                        <p class="text-gray-600 mb-3">集群内庭院/附属洋楼一层，兼顾游客休憩与本地居民日常社交</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">梁林主题</span>
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">文化社交</span>
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">免费借阅</span>
+                        </div>
+                    </div>
+                    
+                    <!-- 梁林IP高端文创集合店 -->
+                    <div class="bg-white rounded-lg shadow-md border-l-4 border-secondary p-5 transition-all-300 hover:shadow-lg">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="font-bold text-lg text-primary">梁林IP高端文创集合店</h4>
+                            <span class="bg-secondary text-white px-3 py-1 rounded-full text-sm font-bold">29-299元</span>
+                        </div>
+                        <h5 class="font-bold text-gray-700 mb-2">具体落地：</h5>
+                        <ul class="text-gray-600 mb-3 space-y-2">
+                            <li>• 独家定制系列："梁林手稿纹样文创"（书签、笔记本、丝巾）、"榫卯结构积木套装"（成人/儿童款）、"建筑主题盲盒"（含迷你古建模型、研学优惠券）</li>
+                            <li>• 联名系列：与天津非遗联名（杨柳青年画+古建主题贴纸、泥人张梁林形象摆件）、与5号圣心堂联名（租界建筑+古建双主题拓印套装）</li>
+                            <li>• 定制化服务：研学成果定制（将学员测绘图打印为装饰画、手作模型封装纪念）</li>
+                        </ul>
+                        <h5 class="font-bold text-gray-700 mb-2">运营方式：</h5>
+                        <p class="text-gray-600 mb-3">文创产品定价29-299元，定制化服务按需求收费，研学学员可享8折优惠</p>
+                        <h5 class="font-bold text-gray-700 mb-2">适配逻辑：</h5>
+                        <p class="text-gray-600 mb-3">核心展馆出口处，承接参观/研学后的消费需求，差异化于4号意式文创</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">独家定制</span>
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">非遗联名</span>
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">研学优惠</span>
+                        </div>
+                    </div>
+                    
+                    <!-- 建筑文化沙龙空间 -->
+                    <div class="bg-white rounded-lg shadow-md border-l-4 border-accent p-5 transition-all-300 hover:shadow-lg">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="font-bold text-lg text-primary">建筑文化沙龙空间</h4>
+                            <span class="bg-accent text-white px-3 py-1 rounded-full text-sm font-bold">免费/2000元</span>
+                        </div>
+                        <h5 class="font-bold text-gray-700 mb-2">具体落地：</h5>
+                        <ul class="text-gray-600 mb-3 space-y-2">
+                            <li>• 每周举办"梁林建筑思想分享会""天津近代建筑故事汇"（邀请本地文化学者、建筑设计师主讲）</li>
+                            <li>• 每月联合4号NEX意巷，举办"文艺+建筑"跨界沙龙（如"建筑与插画""古建与摄影"主题）</li>
+                            <li>• 承接小型学术交流、文化发布会（如建筑书籍首发、研学成果分享）</li>
+                        </ul>
+                        <h5 class="font-bold text-gray-700 mb-2">运营方式：</h5>
+                        <p class="text-gray-600 mb-3">公益沙龙免费预约，商业活动收费2000元/场（含场地、茶歇），每场限20人</p>
+                        <h5 class="font-bold text-gray-700 mb-2">适配逻辑：</h5>
+                        <p class="text-gray-600 mb-3">茶座旁的独立空间，可移动隔断灵活调整，适配不同规模活动</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">思想分享</span>
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">跨界沙龙</span>
+                            <span class="bg-light text-primary px-2 py-1 rounded text-xs font-medium">学术交流</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 空间联动与运营管理 -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-primary mb-8 text-center">空间联动与运营管理</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- 内部空间分配 -->
+                <div>
+                    <h3 class="text-xl font-bold text-primary mb-6">1. 内部空间分配（适配梁林建筑集群肌理）</h3>
+                    
+                    <!-- 内部空间分配卡片 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <!-- 核心洋楼 -->
+                        <div class="bg-white rounded-lg shadow-md border-l-4 border-primary p-5 transition-all-300 hover:shadow-lg">
+                            <h4 class="font-bold text-lg text-primary mb-3">核心洋楼（1-2栋）</h4>
+                            <h5 class="font-bold text-gray-700 mb-2">用途：</h5>
+                            <p class="text-gray-600 mb-3">梁林建筑文化核心展馆+数字沉浸体验厅</p>
+                            <h5 class="font-bold text-gray-700 mb-2">改造原则：</h5>
+                            <p class="text-gray-600 mb-3">保留原有建筑风貌（如门窗、柱式、墙面），仅做基础防潮、照明改造；展陈设施均为可移动设计，不固定在建筑本体</p>
+                        </div>
+                        
+                        <!-- 中小型洋楼 -->
+                        <div class="bg-white rounded-lg shadow-md border-l-4 border-secondary p-5 transition-all-300 hover:shadow-lg">
+                            <h4 class="font-bold text-lg text-primary mb-3">中小型洋楼（2-3栋）</h4>
+                            <h5 class="font-bold text-gray-700 mb-2">用途：</h5>
+                            <p class="text-gray-600 mb-3">研学工坊+研讨空间+文创集合店</p>
+                            <h5 class="font-bold text-gray-700 mb-2">改造原则：</h5>
+                            <p class="text-gray-600 mb-3">采用"前店后坊"模式（一层文创零售，二层研学研讨）；家具、展柜为可移动款式，电路改造采用低压安全线路</p>
+                        </div>
+                        
+                        <!-- 公共庭院 -->
+                        <div class="bg-white rounded-lg shadow-md border-l-4 border-accent p-5 transition-all-300 hover:shadow-lg">
+                            <h4 class="font-bold text-lg text-primary mb-3">公共庭院</h4>
+                            <h5 class="font-bold text-gray-700 mb-2">用途：</h5>
+                            <p class="text-gray-600 mb-3">主题茶座+研学成果展示+投影秀场地</p>
+                            <h5 class="font-bold text-gray-700 mb-2">改造原则：</h5>
+                            <p class="text-gray-600 mb-3">保留原有绿植，增设可移动休闲座椅、遮阳伞、投影设备；地面不硬化，采用防滑地垫（活动时铺设）</p>
+                        </div>
+                        
+                        <!-- 附属建筑 -->
+                        <div class="bg-white rounded-lg shadow-md border-l-4 border-dark p-5 transition-all-300 hover:shadow-lg">
+                            <h4 class="font-bold text-lg text-primary mb-3">附属建筑</h4>
+                            <h5 class="font-bold text-gray-700 mb-2">用途：</h5>
+                            <p class="text-gray-600 mb-3">研学接待中心+工具存放室+员工休息室</p>
+                            <h5 class="font-bold text-gray-700 mb-2">改造原则：</h5>
+                            <p class="text-gray-600 mb-3">靠近集群入口，方便游客咨询、报名；工具存放室配备防潮柜，避免测绘工具损坏</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 与周边地块联动 -->
+                <div>
+                    <h3 class="text-xl font-bold text-primary mb-6">2. 与周边地块联动（形成北区文化集群网络）</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-light rounded-lg p-6 shadow-md">
+                            <h4 class="font-bold text-lg text-dark mb-3">与5号静享集群</h4>
+                            <p class="text-gray-600">共享研学资源，地块2的进阶研学营包含5号租界建筑研学环节，5号研学学员可优先预约地块2大师课，推出"双馆联票"（80元/人，含地块2展馆+5号研学）</p>
+                        </div>
+                        
+                        <div class="bg-light rounded-lg p-6 shadow-md">
+                            <h4 class="font-bold text-lg text-dark mb-3">与1号导流驿站</h4>
+                            <p class="text-gray-600">导览手册重点标注"地块2梁林建筑集群"，提供步行路线（5分钟直达），散客可领取"展馆门票减10元"优惠券；设置"梁林IP打卡路线"（1号→2号→5号→4号）</p>
+                        </div>
+                        
+                        <div class="bg-light rounded-lg p-6 shadow-md">
+                            <h4 class="font-bold text-lg text-dark mb-3">与4号特色会客厅</h4>
+                            <p class="text-gray-600">文创产品互补（4号侧重意式文艺，地块2侧重建筑IP），沙龙活动共享嘉宾资源（4号艺术专家+地块2建筑学者），推出"文艺+建筑"联名体验套餐（4号手作+地块2茶座，98元/人）</p>
+                        </div>
+                        
+                        <div class="bg-light rounded-lg p-6 shadow-md">
+                            <h4 class="font-bold text-lg text-dark mb-3">与3号配套地块</h4>
+                            <p class="text-gray-600">3号作为"研学配套延伸区"，提供大型研学团队接待、工具租赁扩容、学员住宿（短期研学营），形成"地块2核心体验+3号配套支撑"的格局</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 运营核心细则 -->
+            <div class="mt-10 bg-white rounded-lg shadow-lg p-8">
+                <h3 class="text-xl font-bold text-primary mb-6">3. 运营核心细则</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-bold text-lg text-dark mb-4">（1）开放与预约</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fa fa-calendar-check-o text-secondary mt-1 mr-3"></i>
+                                <span><strong>常规开放：</strong>周二至周日 9:00-20:00（周一闭馆维护）</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-book text-secondary mt-1 mr-3"></i>
+                                <span><strong>预约机制：</strong>展馆参观可现场购票/线上预约，研学课程、沙龙活动需提前1-3天预约（小程序"梁林建筑研学"）</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-users text-secondary mt-1 mr-3"></i>
+                                <span><strong>流量控制：</strong>瞬时最大承载量50人（展馆20人+研学15人+茶座15人），避免人流聚集破坏建筑与氛围</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold text-lg text-dark mb-4">（2）人员配置（突出专业性）</h4>
+                        <!-- 人员配置卡片 -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <!-- 展馆讲解员 -->
+                            <div class="bg-white rounded-lg shadow-md border-l-4 border-primary p-4 transition-all-300 hover:shadow-lg">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h5 class="font-bold text-lg text-primary">展馆讲解员</h5>
+                                    <span class="bg-primary text-white px-2 py-1 rounded-full text-xs font-bold">2名（轮值）</span>
+                                </div>
+                                <p class="text-gray-600">负责展馆讲解、AR互动指导、游客咨询</p>
+                            </div>
+                            
+                            <!-- 研学导师 -->
+                            <div class="bg-white rounded-lg shadow-md border-l-4 border-secondary p-4 transition-all-300 hover:shadow-lg">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h5 class="font-bold text-lg text-primary">研学导师</h5>
+                                    <span class="bg-secondary text-white px-2 py-1 rounded-full text-xs font-bold">3名（兼职）</span>
+                                </div>
+                                <p class="text-gray-600">开展入门/进阶研学课程，联动5号研学路线</p>
+                            </div>
+                            
+                            <!-- 驻场专家 -->
+                            <div class="bg-white rounded-lg shadow-md border-l-4 border-accent p-4 transition-all-300 hover:shadow-lg">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h5 class="font-bold text-lg text-primary">驻场专家</h5>
+                                    <span class="bg-accent text-white px-2 py-1 rounded-full text-xs font-bold">1名（每月5天）</span>
+                                </div>
+                                <p class="text-gray-600">主讲大师课、学术沙龙，审核研学课程内容</p>
+                            </div>
+                            
+                            <!-- 运营店长 -->
+                            <div class="bg-white rounded-lg shadow-md border-l-4 border-dark p-4 transition-all-300 hover:shadow-lg">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h5 class="font-bold text-lg text-primary">运营店长</h5>
+                                    <span class="bg-dark text-white px-2 py-1 rounded-full text-xs font-bold">1名（全职）</span>
+                                </div>
+                                <p class="text-gray-600">统筹业态运营、预约管理、联动对接</p>
+                            </div>
+                            
+                            <!-- 店员/志愿者 -->
+                            <div class="bg-white rounded-lg shadow-md border-l-4 border-gray-500 p-4 transition-all-300 hover:shadow-lg">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h5 class="font-bold text-lg text-primary">店员/志愿者</h5>
+                                    <span class="bg-gray-500 text-white px-2 py-1 rounded-full text-xs font-bold">2名（轮值）</span>
+                                </div>
+                                <p class="text-gray-600">负责文创售卖、茶座服务、成果展示维护</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8">
+                    <h4 class="font-bold text-lg text-dark mb-4">（3）合规与改造红线</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fa fa-unlock-alt text-secondary mt-1 mr-3"></i>
+                            <span><strong>建筑改造：</strong>所有设施（展柜、桌椅、投影设备）均为可移动设计，不打孔、不刷漆、不改动建筑本体（墙体、门窗、柱式、地面）；照明采用低压暖光射灯，避免强光损伤建筑内饰</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-book text-secondary mt-1 mr-3"></i>
+                            <span><strong>内容合规：</strong>所有展示、课程内容不涉及敏感信息，聚焦梁林建筑思想、近代建筑研究、文化传承</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-volume-down text-secondary mt-1 mr-3"></i>
+                            <span><strong>氛围控制：</strong>全程噪音控制在55分贝以下，茶座、研讨空间设置"静享提示牌"，禁止大型嘈杂活动（如市集、演出）</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 相关地块 -->
+    <section class="py-12 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold text-primary mb-8 text-center">相关地块</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- 5号地块 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all-300 hover:shadow-xl">
+                    <div class="relative h-40 bg-accent flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fa fa-church text-4xl text-white mb-2"></i>
+                            <h3 class="font-bold text-lg text-white">5号地块</h3>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg text-primary mb-2">「静享境」</h3>
+                        <p class="text-gray-600 mb-4">慢享北里·租界文化静享节点·意式宗教建筑轻研学地</p>
+                        <a href="district-5.html" class="text-primary hover:text-accent font-bold flex items-center">
+                            查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 1号地块 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all-300 hover:shadow-xl">
+                    <div class="relative h-40 bg-primary flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fa fa-map-marker text-4xl text-white mb-2"></i>
+                            <h3 class="font-bold text-lg text-white">1号地块</h3>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg text-primary mb-2">「导览境」</h3>
+                        <p class="text-gray-600 mb-4">慢享北里·南北区联动起点·全域慢行导览枢纽</p>
+                        <a href="district-1.html" class="text-primary hover:text-accent font-bold flex items-center">
+                            查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 4号地块 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all-300 hover:shadow-xl">
+                    <div class="relative h-40 bg-secondary flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fa fa-paint-brush text-4xl text-white mb-2"></i>
+                            <h3 class="font-bold text-lg text-white">4号地块</h3>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg text-primary mb-2">「文艺境」</h3>
+                        <p class="text-gray-600 mb-4">慢享北里·意式文艺体验核心·南北区中途承接枢纽</p>
+                        <a href="district-4.html" class="text-primary hover:text-accent font-bold flex items-center">
+                            查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary hover:bg-accent text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all-300 opacity-0 invisible">
+        <i class="fa fa-angle-up text-2xl"></i>
+    </button>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <i class="fa fa-map-marker text-secondary text-xl"></i>
+                        <span class="text-xl font-bold">慢享北里</span>
+                        <span class="text-sm opacity-70">文化生活枢纽</span>
+                    </div>
+                    <p class="mt-2 text-sm opacity-70">© 2026 慢享北里文化生活枢纽. 保留所有权利.</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-white hover:text-secondary transition-all-300">
+                        <i class="fa fa-weixin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-secondary transition-all-300">
+                        <i class="fa fa-weibo text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-secondary transition-all-300">
+                        <i class="fa fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 返回顶部按钮
+        const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
